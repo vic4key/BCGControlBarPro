@@ -26,11 +26,11 @@ public:
 
     CPoint center = this->CenterPoint();
 
-    double semi_major_axis = this->Width() / 2;
+    double semi_major_axis = this->Width()  / 2;
     double semi_minor_axis = this->Height() / 2;
 
-    double normalized_x = double(point.x - center.x) / semi_major_axis;
-    double normalized_y = double(point.y - center.y) / semi_minor_axis;
+    double normalized_x = (point.x - center.x) / semi_major_axis;
+    double normalized_y = (point.y - center.y) / semi_minor_axis;
 
     return bcg_sqr(normalized_x) + bcg_sqr(normalized_y) <= 1.;
   }
