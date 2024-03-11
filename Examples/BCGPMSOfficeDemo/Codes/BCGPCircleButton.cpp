@@ -75,6 +75,28 @@ CSize CBCGPCircleButton::SizeToContent(BOOL bCalcOnly)
   return size;
 }
 
+int CBCGPCircleButton::GetImageHorzMargin() const
+{
+  auto result = __super::GetImageHorzMargin();
+
+  // @refer to CBCGPButton.SizeToContent(...)
+
+  return result;
+}
+
+int CBCGPCircleButton::GetVertMargin() const
+{
+  auto result = __super::GetVertMargin();
+
+  // @refer to CBCGPButton.SizeToContent(...)
+  if (m_bTopImage)
+  {
+    result += 15;
+  }
+
+  return result;
+}
+
 void CBCGPCircleButton::OnDraw(CDC* pDC, const CRect& rect, UINT uiState)
 {
   m_clrText = globalData.clrBarText;

@@ -17,6 +17,8 @@ public:
   virtual ~CBCGPCircleButton();
 
   virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
+  virtual int GetImageHorzMargin() const;
+  virtual int GetVertMargin() const;
 
   virtual void OnDraw(CDC* pDC, const CRect& rect, UINT uiState);
   virtual void OnFillBackground(CDC* pDC, const CRect& rectClient);
