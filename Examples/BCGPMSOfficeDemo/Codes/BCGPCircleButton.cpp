@@ -81,11 +81,14 @@ void CBCGPCircleButton::OnFillBackground(CDC* pDC, const CRect& rectClient)
 
   if (dynamic_cast<CBCGPVisualManager2016*>(pVM) != nullptr)
   {
-    auto style = CBCGPVisualManager2016::GetStyle();
-    if (style == CBCGPVisualManager2016::Style::Office2016_Black)
+    auto m_Style = CBCGPVisualManager2016::GetStyle();
+    if (m_Style == CBCGPVisualManager2016::Style::Office2016_Black)
     {
-      //auto m_clrControl = pVM->GetControlFillColor();
-      //color_normal = m_clrControl;
+      // @refer to CBCGPVisualManagerVS2013.SetupColors (BCGPVisualManagerVS2012.cpp)
+      auto m_clrControl = m_Style == CBCGPVisualManagerVS2012::Style::VS2012_Dark ?
+        CBCGPDrawManager::ColorMakeLighter(globalData.clrBarFace, .028) :
+        CBCGPDrawManager::ColorMakeDarker(globalData.clrBarFace, .1);
+      color_normal = m_clrControl;
     }
   }
 
