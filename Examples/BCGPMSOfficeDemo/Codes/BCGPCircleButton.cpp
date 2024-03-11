@@ -84,10 +84,8 @@ void CBCGPCircleButton::OnFillBackground(CDC* pDC, const CRect& rectClient)
     auto m_Style = CBCGPVisualManager2016::GetStyle();
     if (m_Style == CBCGPVisualManager2016::Style::Office2016_Black)
     {
-      // @refer to CBCGPVisualManagerVS2013.SetupColors (BCGPVisualManagerVS2012.cpp)
-      auto m_clrControl = m_Style == CBCGPVisualManagerVS2012::Style::VS2012_Dark ?
-        CBCGPDrawManager::ColorMakeLighter(globalData.clrBarFace, .028) :
-        CBCGPDrawManager::ColorMakeDarker(globalData.clrBarFace, .1);
+      // @refer to `CBCGPVisualManagerVS2012.SetupColors.else` (BCGPVisualManagerVS2012.cpp)
+      auto m_clrControl = CBCGPDrawManager::ColorMakeDarker(globalData.clrBarFace, .1);
       color_normal = m_clrControl;
     }
   }
@@ -127,7 +125,6 @@ void CBCGPCircleButton::OnMouseMove(UINT nFlags, CPoint point)
 {
   CRect rect;
   GetClientRect(rect);
-
   CBCGPEllipseEx ellipse(rect);
   __super::OnMouseMove(nFlags, ellipse.contains(point) ? point : CPoint(-1, -1));
 }
