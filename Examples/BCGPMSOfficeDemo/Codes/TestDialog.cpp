@@ -1,7 +1,14 @@
 #include "stdafx.h"
 #include "TestDialog.h"
 
-#include <BCGCBPro/BCGPDialog.h>
+#include <BCGPDialog.h>
+#include <BCGPMessageBox.h>
+
+#define UpdateButtons()\
+  m_push_button.SetImageAutoScale();\
+  m_push_button.Invalidate();\
+  m_circle_button.SetImageAutoScale();\
+  m_circle_button.Invalidate();
 
 IMPLEMENT_DYNCREATE(TestDialog, CBCGPDialog)
 
@@ -20,13 +27,6 @@ TestDialog::TestDialog(CWnd* pParent) : CBCGPDialog(TestDialog::IDD, pParent)
 
 TestDialog::~TestDialog()
 {
-}
-
-BOOL TestDialog::OnInitDialog()
-{
-  __super::OnInitDialog();
-
-  return TRUE;
 }
 
 void TestDialog::DoDataExchange(CDataExchange* pDX)
@@ -66,25 +66,17 @@ void TestDialog::OnBnClickedButtonImage()
     m_push_button.SetImage((HBITMAP)NULL);
   }
 
-  m_push_button.SetImageAutoScale();
-  m_push_button.Invalidate();
-
-  m_circle_button.SetImageAutoScale();
-  m_circle_button.Invalidate();
+  UpdateButtons();
 
   GetDlgItem(IDC_BUTTON_IMAGE_RIGHT)->EnableWindow(m_button_with_image);
 }
-
 
 void TestDialog::OnBnClickedButtonImageRight()
 {
   UpdateData();
 
   m_push_button.m_bRighImage = m_button_right_image;
-  m_push_button.SetImageAutoScale();
-  m_push_button.Invalidate();
-
   m_circle_button.m_bRighImage = m_button_right_image;
-  m_circle_button.SetImageAutoScale();
-  m_circle_button.Invalidate();
+
+  UpdateButtons();
 }

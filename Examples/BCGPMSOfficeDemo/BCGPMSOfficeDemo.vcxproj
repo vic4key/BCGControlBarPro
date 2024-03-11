@@ -111,7 +111,7 @@
       <ObjectFileName>.\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <AdditionalIncludeDirectories>$(BCGControlBarPro)include;$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -151,7 +151,7 @@
       <ObjectFileName>.\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
-      <AdditionalIncludeDirectories>$(BCGControlBarPro)include;$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -190,7 +190,7 @@
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>$(BCGControlBarPro)include;$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -229,7 +229,7 @@
       <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
-      <AdditionalIncludeDirectories>$(BCGControlBarPro)include;$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -256,13 +256,14 @@
     <ClCompile Include="BackStagePageInfo.cpp" />
     <ClCompile Include="BackStagePageNew.cpp" />
     <ClCompile Include="BackStagePageShare.cpp" />
-    <ClCompile Include="BCGPCircleButton.cpp" />
     <ClCompile Include="BCGPMSOfficeDemo.cpp" />
     <ClCompile Include="BCGPMSOfficeDemoDoc.cpp" />
     <ClCompile Include="BCGPMSOfficeDemoView.cpp" />
     <ClCompile Include="ChartPane.cpp" />
     <ClCompile Include="ClipboardPane.cpp" />
     <ClCompile Include="CntrItem.cpp" />
+    <ClCompile Include="Codes\BCGPCircleButton.cpp" />
+    <ClCompile Include="Codes\TestDialog.cpp" />
     <ClCompile Include="DlgBanner.cpp" />
     <ClCompile Include="GridPane.cpp" />
     <ClCompile Include="MainFrm.cpp" />
@@ -287,7 +288,6 @@
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
       <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
     </ClCompile>
-    <ClCompile Include="TestDialog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BCGPMSOfficeDemo.rc" />
@@ -297,13 +297,14 @@
     <ClInclude Include="BackStagePageInfo.h" />
     <ClInclude Include="BackStagePageNew.h" />
     <ClInclude Include="BackStagePageShare.h" />
-    <ClInclude Include="BCGPCircleButton.h" />
     <ClInclude Include="BCGPMSOfficeDemo.h" />
     <ClInclude Include="BCGPMSOfficeDemoDoc.h" />
     <ClInclude Include="BCGPMSOfficeDemoView.h" />
     <ClInclude Include="ChartPane.h" />
     <ClInclude Include="ClipboardPane.h" />
     <ClInclude Include="CntrItem.h" />
+    <ClInclude Include="Codes\BCGPCircleButton.h" />
+    <ClInclude Include="Codes\TestDialog.h" />
     <ClInclude Include="DlgBanner.h" />
     <ClInclude Include="GridPane.h" />
     <ClInclude Include="MainFrm.h" />
@@ -320,7 +321,6 @@
     <ClInclude Include="ShareOptionsPage5.h" />
     <ClInclude Include="ShareOptionsPage6.h" />
     <ClInclude Include="StdAfx.h" />
-    <ClInclude Include="TestDialog.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Background1.png" />

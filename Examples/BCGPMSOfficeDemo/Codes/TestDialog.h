@@ -15,8 +15,6 @@ public:
   TestDialog(CWnd* pParent = nullptr);
   virtual ~TestDialog();
 
-  virtual BOOL OnInitDialog();
-
 protected:
   virtual void DoDataExchange(CDataExchange* pDX);
 
@@ -27,8 +25,8 @@ protected:
   DECLARE_MESSAGE_MAP()
 
 private:
-  BCGPCircleButton m_circle_button;
-  BCGPCircleButton m_circle_button_2;
+  CBCGPCircleButton m_circle_button;
+  CBCGPCircleButton m_circle_button_2;
   CBCGPButton m_push_button;
   CBCGPButton m_push_button_2;
   BOOL m_button_with_image;

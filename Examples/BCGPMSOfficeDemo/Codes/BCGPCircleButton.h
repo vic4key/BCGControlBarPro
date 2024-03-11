@@ -2,13 +2,13 @@
 
 class CBCGPButton;
 
-class BCGPCircleButton : public CBCGPButton
+class CBCGPCircleButton : public CBCGPButton
 {
-  DECLARE_DYNCREATE(BCGPCircleButton)
+  DECLARE_DYNCREATE(CBCGPCircleButton)
 
 public:
-  BCGPCircleButton();
-  virtual ~BCGPCircleButton();
+  CBCGPCircleButton();
+  virtual ~CBCGPCircleButton();
 
   virtual void OnDraw(CDC* pDC, const CRect& rect, UINT uiState);
   virtual void OnFillBackground(CDC* pDC, const CRect& rectClient);

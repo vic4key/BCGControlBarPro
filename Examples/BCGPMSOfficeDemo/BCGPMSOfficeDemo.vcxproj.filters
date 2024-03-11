@@ -13,6 +13,9 @@
       <UniqueIdentifier>{6f007520-aa98-4e38-8205-4883d05498e6}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
+    <Filter Include="Codes">
+      <UniqueIdentifier>{05463b2c-ad6b-4f77-a25f-183441596678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackStagePageHelp.cpp">
@@ -90,11 +93,11 @@
     <ClCompile Include="StdAfx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TestDialog.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Codes\TestDialog.cpp">
+      <Filter>Codes</Filter>
     </ClCompile>
-    <ClCompile Include="BCGPCircleButton.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Codes\BCGPCircleButton.cpp">
+      <Filter>Codes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -181,11 +184,11 @@
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BCGPCircleButton.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Codes\TestDialog.h">
+      <Filter>Codes</Filter>
     </ClInclude>
-    <ClInclude Include="TestDialog.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Codes\BCGPCircleButton.h">
+      <Filter>Codes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

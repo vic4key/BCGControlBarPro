@@ -1,33 +1,33 @@
 #include "stdafx.h"
 #include "BCGPCircleButton.h"
 
-#include <atlimage.h>
+#include <Bcgglobals.h>
 #include <BCGPButton.h>
 #include <BCGPVisualManager.h>
 
 static const COLORREF clrDefault = (COLORREF)-1;
 
-IMPLEMENT_DYNCREATE(BCGPCircleButton, CBCGPButton)
+IMPLEMENT_DYNCREATE(CBCGPCircleButton, CBCGPButton)
 
-BEGIN_MESSAGE_MAP(BCGPCircleButton, CBCGPButton)
+BEGIN_MESSAGE_MAP(CBCGPCircleButton, CBCGPButton)
 END_MESSAGE_MAP()
 
-BCGPCircleButton::BCGPCircleButton() : CBCGPButton()
+CBCGPCircleButton::CBCGPCircleButton() : CBCGPButton()
 {
   m_bTransparent = TRUE;
 }
 
-BCGPCircleButton::~BCGPCircleButton()
+CBCGPCircleButton::~CBCGPCircleButton()
 {
 }
 
-void BCGPCircleButton::OnDraw(CDC* pDC, const CRect& rect, UINT uiState)
+void CBCGPCircleButton::OnDraw(CDC* pDC, const CRect& rect, UINT uiState)
 {
   m_clrText = globalData.clrBarText;
   __super::OnDraw(pDC, rect, uiState);
 }
 
-void BCGPCircleButton::OnFillBackground(CDC* pDC, const CRect& rectClient)
+void CBCGPCircleButton::OnFillBackground(CDC* pDC, const CRect& rectClient)
 {
   globalData.DrawParentBackground(this, pDC, LPRECT(&rectClient));
 
@@ -69,7 +69,7 @@ void BCGPCircleButton::OnFillBackground(CDC* pDC, const CRect& rectClient)
   dm.DrawEllipse(rectClient, color_background, clrDefault);
 }
 
-void BCGPCircleButton::OnDrawBorder(CDC* pDC, CRect& rectClient, UINT uiState)
+void CBCGPCircleButton::OnDrawBorder(CDC* pDC, CRect& rectClient, UINT uiState)
 {
   UNREFERENCED_PARAMETER(uiState);
 

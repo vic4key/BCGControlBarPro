@@ -20,7 +20,7 @@
 #include "BCGPMSOfficeDemoDoc.h"
 #include "BCGPMSOfficeDemoView.h"
 #include "RibbonTooltipCtrl.h"
-#include "TestDialog.h"
+#include "Codes/TestDialog.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
