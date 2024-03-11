@@ -1,0 +1,532 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{a31e9d5a-eef5-4fd6-9756-5e1166d1a975}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5f69abd1-7f9c-4d9a-94bd-5fbf855af714}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{6f007520-aa98-4e38-8205-4883d05498e6}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BackStagePageHelp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BackStagePageInfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BackStagePageNew.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BackStagePageShare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BCGPMSOfficeDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BCGPMSOfficeDemoDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BCGPMSOfficeDemoView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChartPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ClipboardPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CntrItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgBanner.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridPane.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionsPage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourcePage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RibbonListButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RibbonTableButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RibbonTooltipCtrl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareOptionsPage1.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareOptionsPage2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareOptionsPage3.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareOptionsPage4.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareOptionsPage5.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShareOptionsPage6.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestDialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BCGPCircleButton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BCGPMSOfficeDemo.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BackStagePageHelp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BackStagePageInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BackStagePageNew.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BackStagePageShare.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BCGPMSOfficeDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BCGPMSOfficeDemoDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BCGPMSOfficeDemoView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChartPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ClipboardPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CntrItem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgBanner.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GridPane.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionsPage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourcePage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RibbonListButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RibbonTableButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RibbonTooltipCtrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareOptionsPage1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareOptionsPage2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareOptionsPage3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareOptionsPage4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareOptionsPage5.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShareOptionsPage6.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BCGPCircleButton.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TestDialog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Background1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Background2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Background3.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Background4.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Background5.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\Background6.PNG">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGPMSOfficeDemo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGPMSOfficeDemoDoc.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_checkissues.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_create.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_createpdfxps.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_filetypes.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_help_list_16.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_help_list_32.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_manageversions.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_new.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_print.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_printpreview.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_protect.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_publishblog.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_quickprint.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_save_as.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_sendattachment.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_sendfax.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_sendlink.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_sendpdf.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_sendxps.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_share.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_signin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bs_watermark.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bullets.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_backstage_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_large_0_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_large_1_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_large_1_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_large_1_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_small_0_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_small_1_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_small_1_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_context_small_1_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_main_large.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_main_small.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_5.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_6.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\chart.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\clearall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ClipboardItem.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\gridarrows.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\HeaderPat_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\HeaderPat_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\HeaderPat_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\HeaderPat_4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\info.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\layout.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\LayoutMetro.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\main.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\multi.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\num.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\options.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_0_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_4_dark.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_1_1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_1_2_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_2_4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\paste.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\pasteall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\picture.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\position2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\ribbon_bar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\spell.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\spell.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\status_bar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\status_group_0.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\table.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ThemeColors.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ThemeEffects.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ThemeFonts.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\ThemeThemes.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tooltip-clipboard.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tooltip-fontdlg.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tooltip-main.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\tooltip-paragraph.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button32.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\bitmap1.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button32hot.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="res\button32pressed.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="res\BCGSoft_ribbon\ribbon.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+    <Xml Include="xptheme.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\BCGPMSOfficeDemo.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\BCGSoft_ribbon\BCGPMSOfficeDemo.ribbon.rc2">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="res\start.rtf">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
