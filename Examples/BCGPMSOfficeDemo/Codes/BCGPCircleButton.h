@@ -21,5 +21,9 @@ public:
   virtual void OnDrawBorder(CDC* pDC, CRect& rectClient, UINT uiState);
 
 protected:
+  afx_msg void OnMouseMove(UINT nFlags, CPoint point);
+  afx_msg void OnLButtonDown(UINT nFlags, CPoint point);
+  afx_msg void OnLButtonUp(UINT nFlags, CPoint point);
+  afx_msg void OnLButtonDblClk(UINT nFlags, CPoint point);
   DECLARE_MESSAGE_MAP()
 };
