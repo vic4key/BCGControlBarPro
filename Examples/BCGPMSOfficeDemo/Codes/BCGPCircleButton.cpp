@@ -59,6 +59,22 @@ CBCGPCircleButton::~CBCGPCircleButton()
 {
 }
 
+CSize CBCGPCircleButton::SizeToContent(BOOL bCalcOnly)
+{
+  auto size = __super::SizeToContent(bCalcOnly);
+
+  auto max_size = max(size.cx, size.cy);
+  size.cx = max_size;
+  size.cy = max_size;
+
+  if (!bCalcOnly)
+  {
+    SetWindowPos(NULL, -1, -1, size.cx, size.cy, SWP_NOMOVE | SWP_NOACTIVATE | SWP_NOZORDER);
+  }
+
+  return size;
+}
+
 void CBCGPCircleButton::OnDraw(CDC* pDC, const CRect& rect, UINT uiState)
 {
   m_clrText = globalData.clrBarText;

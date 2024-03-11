@@ -16,6 +16,8 @@ public:
   CBCGPCircleButton();
   virtual ~CBCGPCircleButton();
 
+  virtual CSize SizeToContent(BOOL bCalcOnly = FALSE);
+
   virtual void OnDraw(CDC* pDC, const CRect& rect, UINT uiState);
   virtual void OnFillBackground(CDC* pDC, const CRect& rectClient);
   virtual void OnDrawBorder(CDC* pDC, CRect& rectClient, UINT uiState);

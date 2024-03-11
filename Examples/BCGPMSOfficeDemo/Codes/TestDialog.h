@@ -27,6 +27,7 @@ protected:
 protected:
   afx_msg void OnBnClickedButton(UINT ID);
   afx_msg void OnBnClickedButtonImage();
+  afx_msg void OnBnClickedButtonImageTop();
   afx_msg void OnBnClickedButtonImageRight();
   DECLARE_MESSAGE_MAP()
 
@@ -36,5 +37,6 @@ private:
   CBCGPButton m_push_button;
   CBCGPButton m_push_button_2;
   BOOL m_button_with_image;
+  BOOL m_button_top_image;
   BOOL m_button_right_image;
 };
