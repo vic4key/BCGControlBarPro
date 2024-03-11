@@ -20,13 +20,14 @@ IMPLEMENT_DYNCREATE(TestDialog, CBCGPDialog)
 
 BEGIN_MESSAGE_MAP(TestDialog, CBCGPDialog)
   ON_COMMAND_RANGE(IDC_CIRCLE_BUTTON, IDC_PUSH_BUTTON_2, OnBnClickedButton)
-  ON_BN_CLICKED(IDC_BUTTON_IMAGE, &TestDialog::OnBnClickedButtonImage)
-  ON_BN_CLICKED(IDC_BUTTON_IMAGE_RIGHT, &TestDialog::OnBnClickedButtonImageRight)
+  ON_BN_CLICKED(IDC_BUTTON_IMAGE, OnBnClickedButtonImage)
+  ON_BN_CLICKED(IDC_BUTTON_IMAGE_RIGHT, OnBnClickedButtonImageRight)
 END_MESSAGE_MAP()
 
-TestDialog::TestDialog(CWnd* pParent) : CBCGPDialog(TestDialog::IDD, pParent)
-, m_button_with_image(FALSE)
-, m_button_right_image(FALSE)
+TestDialog::TestDialog(CWnd* pParent)
+  : CBCGPDialog(TestDialog::IDD, pParent)
+  , m_button_with_image(FALSE)
+  , m_button_right_image(FALSE)
 {
   EnableVisualManagerStyle();
 }
