@@ -1,34 +1,59 @@
-# Prerequisites
-*.d
-
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
 
 **/.vs
+**/.svn
+**/.git
+**/.vscode
+**/.history
+**/.DS_Store
+**/__pycache__
+**/ipch
+**/Debug
+**/Release
+*.user
+*.pdb
+*.idb
+*.suo
+*.sdf
+*.ncb
+*.o
+*.a
+*.lib
+*.obj
+*.dll
+*.exe
+*.sys
+*.pyc
+*.pyo
+*.zip
+*.7z
+*.bak
+*.vcs-cache
+/lib
+/obj
+/MD
+/MDd
+/MT
+/MTd
+/Win32
+/x64
+packages/
+
+BCGCBPro/
+BCGPAppWizard/
+BCGPAppWizard7/
+BCGPAppWizard2005/
+Bin/
+Bin64/
+Designer/
+Graphics/
+include/
+lib/
+Samples/
+Service/
+
+BCGCBProIntegrationWizard.exe
+copyright.txt
+license.txt
