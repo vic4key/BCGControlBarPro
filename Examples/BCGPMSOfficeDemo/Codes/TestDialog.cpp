@@ -1,3 +1,9 @@
+/**
+ * @file   TestDialog.cpp
+ * @author Vic P.
+ * @brief  Implementation for CBCGPCircleButton
+ */
+
 #include "stdafx.h"
 #include "TestDialog.h"
 
@@ -49,7 +55,6 @@ void TestDialog::OnBnClickedButton(UINT ID)
     BCGPMessageBox(text);
   }
 }
-
 
 void TestDialog::OnBnClickedButtonImage()
 {

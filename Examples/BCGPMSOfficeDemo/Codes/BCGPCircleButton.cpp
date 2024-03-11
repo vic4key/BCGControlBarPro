@@ -1,3 +1,9 @@
+/**
+ * @file   BCGPCircleButton.cpp
+ * @author Vic P.
+ * @brief  Implementation for CBCGPCircleButton
+ */
+
 #include "stdafx.h"
 #include "BCGPCircleButton.h"
 

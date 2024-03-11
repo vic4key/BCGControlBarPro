@@ -1,3 +1,9 @@
+/**
+ * @file   BCGPCircleButton.h
+ * @author Vic P.
+ * @brief  Header for CBCGPCircleButton
+ */
+
 #pragma once
 
 class CBCGPButton;

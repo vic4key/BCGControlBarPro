@@ -1,3 +1,9 @@
+/**
+ * @file   TestDialog.h
+ * @author Vic P.
+ * @brief  Header for CBCGPCircleButton
+ */
+
 #pragma once
 
 #include "resource.h"
