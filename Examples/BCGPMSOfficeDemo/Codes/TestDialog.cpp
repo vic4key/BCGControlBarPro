@@ -24,7 +24,7 @@ BEGIN_MESSAGE_MAP(TestDialog, CBCGPDialog)
   ON_COMMAND_RANGE(IDC_CIRCLE_BUTTON, IDC_PUSH_BUTTON_2, OnBnClickedButton)
   ON_BN_CLICKED(IDC_BUTTON_IMAGE, OnBnClickedButtonImage)
   ON_BN_CLICKED(IDC_BUTTON_IMAGE_RIGHT, OnBnClickedButtonImageRight)
-  ON_BN_CLICKED(IDC_BUTTON_IMAGE_TOP, &TestDialog::OnBnClickedButtonImageTop)
+  ON_BN_CLICKED(IDC_BUTTON_IMAGE_TOP, OnBnClickedButtonImageTop)
 END_MESSAGE_MAP()
 
 TestDialog::TestDialog(CWnd* pParent)

@@ -34,8 +34,10 @@ protected:
 private:
   CBCGPCircleButton m_circle_button;
   CBCGPCircleButton m_circle_button_2;
+
   CBCGPButton m_push_button;
   CBCGPButton m_push_button_2;
+
   BOOL m_button_with_image;
   BOOL m_button_top_image;
   BOOL m_button_right_image;
