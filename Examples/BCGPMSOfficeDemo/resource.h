@@ -239,6 +239,7 @@
 #define IDC_IMAGE_RIGHT                 1128
 #define IDC_BUTTON_IMAGE_RIGHT          1128
 #define IDC_BUTTON_IMAGE_TOP            1129
+#define IDC_SAMPLE_CIRCLE_BUTTON        1130
 #define IDC_MAIL                        17010
 #define IDC_URL                         17011
 #define IDC_YEAR                        17070
@@ -688,7 +689,7 @@
 #define _APS_3D_CONTROLS                     1
 #define _APS_NEXT_RESOURCE_VALUE        277
 #define _APS_NEXT_COMMAND_VALUE         33547
-#define _APS_NEXT_CONTROL_VALUE         1130
+#define _APS_NEXT_CONTROL_VALUE         1131
 #define _APS_NEXT_SYMED_VALUE           1101
 #endif
 #endif

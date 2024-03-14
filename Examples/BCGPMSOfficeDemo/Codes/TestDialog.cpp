@@ -25,6 +25,7 @@ BEGIN_MESSAGE_MAP(TestDialog, CBCGPDialog)
   ON_BN_CLICKED(IDC_BUTTON_IMAGE, OnBnClickedButtonImage)
   ON_BN_CLICKED(IDC_BUTTON_IMAGE_RIGHT, OnBnClickedButtonImageRight)
   ON_BN_CLICKED(IDC_BUTTON_IMAGE_TOP, OnBnClickedButtonImageTop)
+  ON_BN_CLICKED(IDC_SAMPLE_CIRCLE_BUTTON, OnBnClickedSampleCircleButton)
 END_MESSAGE_MAP()
 
 TestDialog::TestDialog(CWnd* pParent)
@@ -50,6 +51,7 @@ void TestDialog::DoDataExchange(CDataExchange* pDX)
   DDX_Check(pDX, IDC_BUTTON_IMAGE, m_button_with_image);
   DDX_Check(pDX, IDC_BUTTON_IMAGE_TOP, m_button_top_image);
   DDX_Check(pDX, IDC_BUTTON_IMAGE_RIGHT, m_button_right_image);
+  DDX_Control(pDX, IDC_SAMPLE_CIRCLE_BUTTON, m_sample_circle_button);
 }
 
 void TestDialog::OnBnClickedButton(UINT ID)
@@ -103,4 +105,9 @@ void TestDialog::OnBnClickedButtonImageRight()
   m_circle_button.m_bRighImage = m_button_right_image;
 
   UpdateButtons();
+}
+
+void TestDialog::OnBnClickedSampleCircleButton()
+{
+  BCGPMessageBox(L"This is a sample circle button.");
 }
