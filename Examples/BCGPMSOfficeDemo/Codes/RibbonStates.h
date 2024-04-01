@@ -144,27 +144,6 @@ public:
    */
   void SetVisible(eRibbonTabIndex tab, eRibbonPanel panel, bool visible);
 
-  /**
-   * Check if panel is available or not. 
-   * @param[in] panel The panel needs checking.
-   * @return the state specify that panel is available or not.
-   */
-  bool IsPanelAvailable(eRibbonPanel panel);
-
-  /**
-   * Check if the panel is hidden by default or not
-   * @param[in] panel The panel needs checking.
-   * @return the state specify that panel is hidden by default or not.
-   */
-  bool IsPanelHiddenByDefault(const eRibbonPanel panel);
-
-  /**
-   * Check if tab is always available or not.
-   * @param[in] tab The rtab index.
-   * @return true if the tab is always available otherwise it's not.
-   */
-  bool IsTabAlwaysVisible(const eRibbonTabIndex tab);
-
 private:
   RibbonTabList m_TabList;
   RibbonPanelMapOfEnumString m_PanelMapOfEnumString;

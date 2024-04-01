@@ -86,11 +86,6 @@ void CRibbonStateDlg::FillPanelListWithCurrentSelectedTab(bool updateButtons)
     auto& panels = *pRibbonPanelList;
     for (auto& e : panels)
     {
-      if (!CRibbonTabs::GetpInstance()->IsPanelAvailable(e.m_Panel))
-      {
-        continue;
-      }
-
       if (e.m_Visible)
       {
         int thePanelIndex = m_SelectedPanels.AddString(e.m_Name.c_str());
@@ -140,8 +135,7 @@ void CRibbonStateDlg::UpdateButtons()
     auto& panels = *pRibbonPanelList;
     const auto NumVisiblePanels = std::count_if(panels.cbegin(), panels.cend(),
       [](const RibbonPanel& panel) -> bool { return panel.m_Visible; });
-    const bool TabAlwaysVisible = CRibbonTabs::GetpInstance()->IsTabAlwaysVisible(pRibbonTab->first);
-    pRemoveButton->EnableWindow(TabAlwaysVisible ? NumVisiblePanels > 1 : m_SelectedPanels.GetCount() > 0);
+    pRemoveButton->EnableWindow(NumVisiblePanels > 0);
   }
 }
 

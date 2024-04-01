@@ -139,18 +139,6 @@ void CRibbonTabs::Initialize()
     AddPanel(panels, eRibbonPanel::FusionAutoFiducialMarker, L"Fusion - Auto Fiducial Markers");
     m_TabList[eRibbonTabIndex::RIBBON_FUSION_TAB] = panels;
   }
-
-  // Update the hidden by default state of panels
-  for (auto& tab : m_TabList)
-  {
-    for (auto& panel : tab.second)
-    {
-      if (IsPanelHiddenByDefault(panel.m_Panel))
-      {
-        panel.m_Visible = false;
-      }
-    }
-  }
 }
 
 void CRibbonTabs::InitializePanelMappingList()
@@ -178,35 +166,6 @@ void CRibbonTabs::InitializePanelMappingList()
   };
 
   fnInitializePanelMapOfEnumString();
-}
-
-bool CRibbonTabs::IsPanelAvailable(eRibbonPanel panel)
-{
-  bool result = true;
-
-  UNREFERENCED_PARAMETER(panel);
-
-  return result;
-}
-
-bool CRibbonTabs::IsPanelHiddenByDefault(const eRibbonPanel panel)
-{
-  bool result = false;
-
-  UNREFERENCED_PARAMETER(panel);
-
-  return result;
-}
-
-bool CRibbonTabs::IsTabAlwaysVisible(const eRibbonTabIndex tab)
-{
-  eRibbonTabIndex tabs[] =
-  {
-    RIBBON_PATIENT_TAB,
-    RIBBON_FUSION_TAB,
-  };
-
-  return std::find(std::begin(tabs), std::end(tabs), tab) != std::end(tabs);
 }
 
 }; // namespace RibbonStates
