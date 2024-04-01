@@ -4,11 +4,13 @@
 
 #include <string>
 #include <vector>
+#include <memory>
 #include <unordered_map>
 
 #define String std::wstring
 #define List std::vector
 #define Dict std::unordered_map
+#define Ptr  std::unique_ptr
 
 namespace RibbonStates
 {
@@ -18,11 +20,7 @@ struct RibbonPanel
   String m_Name;
   bool m_Visible;
 
-  RibbonPanel()
-  {
-    m_Name    = L"";
-    m_Visible = false;
-  };
+  RibbonPanel() = delete;
 
   RibbonPanel(const String& name, const bool visible = true)
   {
@@ -50,23 +48,35 @@ struct RibbonPanel
 
   bool operator != (const RibbonPanel &right) const
   {
-    return (!(*this == right));
+    return !(*this == right);
   }
 };
 
+using RibbonPanelList = List<RibbonPanel>;
+using RibbonTabList = Dict<String, RibbonPanelList>;
+
+struct RibbonTab
+{
+  RibbonPanelList& m_Panels;
+
+  RibbonTab(RibbonPanelList& panels) : m_Panels(panels) {}
+
+  void AddPanel(const String& name, const bool visible = true)
+  {
+    m_Panels.push_back(RibbonPanel(name, visible));
+  }
+};
+
+/**
+ * Ribbon Tab Manager
+ */
 class RibbonTabs : public SingletonT<RibbonTabs>
 {
 public:
+  friend RibbonTab;
+
   RibbonTabs();
   virtual ~RibbonTabs();
-
-  typedef List<RibbonPanel> RibbonPanelList;
-  typedef Dict<String, RibbonPanelList> RibbonTabList;
-
-  /**
-   * Initializes the ribbon states.
-   */
-  void Initialize();
 
   /**
    * Gets the tab list.
@@ -80,8 +90,11 @@ public:
    */
   void SetTabList(RibbonTabList& tabs);
 
-private:
-  RibbonTabList m_TabList;
+  /**
+   * Adds a tab to tab list.
+   * @param[in] tab The tab name.
+   */
+  Ptr<RibbonTab> AddTab(const String& tab);
 
   /**
    * Gets a list of panels in the tab.
@@ -90,13 +103,8 @@ private:
    */
   RibbonPanelList* GetpPanelList(const String& tab);
 
-  /**
-   * Adds panel to panel list.
-   * @param[out] panels The panel list.
-   * @param[in]  name The panel name.
-   * @param[in]  visible The visible state.
-   */
-  void AddPanel(RibbonPanelList& panels, String name, bool visible = true);
+private:
+  RibbonTabList m_TabList;
 };
 
 }; // namespace RibbonStates

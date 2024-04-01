@@ -5,8 +5,6 @@
 #include "resource.h"
 
 using namespace RibbonStates;
-using RibbonTabList   = RibbonTabs::RibbonTabList;
-using RibbonPanelList = RibbonTabs::RibbonPanelList;
 
 class RibbonStateDlg : public CBCGPDialog
 {
