@@ -102,6 +102,9 @@
     <ClCompile Include="Codes\RibbonStateDlg.cpp">
       <Filter>Codes</Filter>
     </ClCompile>
+    <ClCompile Include="Codes\RibbonStates.cpp">
+      <Filter>Codes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BCGPMSOfficeDemo.rc">
@@ -194,6 +197,15 @@
       <Filter>Codes</Filter>
     </ClInclude>
     <ClInclude Include="Codes\RibbonStateDlg.h">
+      <Filter>Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes\RibbonStates.h">
+      <Filter>Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes\SingletonT.h">
+      <Filter>Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes\PantherRibbonBar.h">
       <Filter>Codes</Filter>
     </ClInclude>
   </ItemGroup>
