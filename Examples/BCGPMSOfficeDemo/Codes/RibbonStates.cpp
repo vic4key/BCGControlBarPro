@@ -6,7 +6,6 @@ namespace RibbonStates
 
 CRibbonTabs::CRibbonTabs()
 {
-  InitializePanelMappingList();
   Initialize();
 }
 
@@ -58,9 +57,9 @@ CRibbonTabs::RibbonPanelList* CRibbonTabs::GetpPanelList(eRibbonTabIndex tab)
   return &(it->second);
 }
 
-void CRibbonTabs::AddPanel(RibbonPanelList& panels, eRibbonPanel panel, String name, bool visible)
+void CRibbonTabs::AddPanel(RibbonPanelList& panels, String name, bool visible)
 {
-  panels.push_back(RibbonPanel(panel, name, visible));
+  panels.push_back(RibbonPanel(name, visible));
 }
 
 void CRibbonTabs::Initialize()
@@ -70,54 +69,27 @@ void CRibbonTabs::Initialize()
   // Patient Tab
   {
     RibbonPanelList panels;
-    AddPanel(panels, eRibbonPanel::PatientPatient, L"Patient - Patient");
-    AddPanel(panels, eRibbonPanel::PatientPatientModels, L"Patient - Patient Model");
-    AddPanel(panels, eRibbonPanel::PatientImageSeries, L"Patient - Image Series");
+    AddPanel(panels, L"Patient - Patient");
+    AddPanel(panels, L"Patient - Patient Model");
+    AddPanel(panels, L"Patient - Image Series");
     m_TabList[eRibbonTabIndex::RIBBON_PATIENT_TAB] = panels;
   }
   // Image Tab
   {
     RibbonPanelList panels;
-    AddPanel(panels, eRibbonPanel::ImageFiducialMarkers, L"Image - Fiducial Markers");
-    AddPanel(panels, eRibbonPanel::ImagePatientOrigin, L"Image - Patient Origin");
-    AddPanel(panels, eRibbonPanel::ImageImagingCenter, L"Image - Imaging Center");
+    AddPanel(panels, L"Image - Fiducial Markers");
+    AddPanel(panels, L"Image - Patient Origin");
+    AddPanel(panels, L"Image - Imaging Center");
     m_TabList[eRibbonTabIndex::RIBBON_IMAGES_TAB] = panels;
   }
   // Fusion Tab
   {
     RibbonPanelList panels;
-    AddPanel(panels, eRibbonPanel::FusionView, L"Fusion - View");
-    AddPanel(panels, eRibbonPanel::FusionRegistration, L"Fusion - Registration");
-    AddPanel(panels, eRibbonPanel::FusionAutoFiducialMarker, L"Fusion - Auto Fiducial Markers");
+    AddPanel(panels, L"Fusion - View");
+    AddPanel(panels, L"Fusion - Registration");
+    AddPanel(panels, L"Fusion - Auto Fiducial Markers");
     m_TabList[eRibbonTabIndex::RIBBON_FUSION_TAB] = panels;
   }
-}
-
-void CRibbonTabs::InitializePanelMappingList()
-{
-  auto fnInitializePanelMapOfEnumString = [&]()
-  {
-    #define Makepair_Stringize_eRibbonPanel(e) m_PanelMapOfEnumString[eRibbonPanel::e] = L#e
-
-    m_PanelMapOfEnumString.clear();
-
-    // Patient Tab
-    Makepair_Stringize_eRibbonPanel(PatientPatient);
-    Makepair_Stringize_eRibbonPanel(PatientPatientModels);
-    Makepair_Stringize_eRibbonPanel(PatientImageSeries);
-
-    // Image Tab
-    Makepair_Stringize_eRibbonPanel(ImageFiducialMarkers);
-    Makepair_Stringize_eRibbonPanel(ImagePatientOrigin);
-    Makepair_Stringize_eRibbonPanel(ImageImagingCenter);
-
-    // Fusion Tab
-    Makepair_Stringize_eRibbonPanel(FusionView);
-    Makepair_Stringize_eRibbonPanel(FusionRegistration);
-    Makepair_Stringize_eRibbonPanel(FusionAutoFiducialMarker);
-  };
-
-  fnInitializePanelMapOfEnumString();
 }
 
 }; // namespace RibbonStates

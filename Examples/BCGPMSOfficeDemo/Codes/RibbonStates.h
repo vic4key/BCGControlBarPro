@@ -19,57 +19,34 @@ enum eRibbonTabIndex
   RIBBON_NUM_TAB
 };
 
-enum eRibbonPanel
-{
-  // Patient Tab
-  PatientPatient,
-  PatientPatientModels,
-  PatientImageSeries,
-  // Image Tab
-  ImageFiducialMarkers,
-  ImagePatientOrigin,
-  ImageImagingCenter,
-  // Fusion Tab
-  FusionView,
-  FusionRegistration,
-  FusionAutoFiducialMarker,
-  // Count
-  PanelCount
-};
-
 namespace RibbonStates
 {
 
 struct RibbonPanel
 {
-  eRibbonPanel m_Panel;
   String m_Name;
   bool m_Visible;
 
   RibbonPanel()
   {
-    m_Panel   = eRibbonPanel::PanelCount;
     m_Name    = L"";
     m_Visible = false;
   };
 
-  RibbonPanel(const eRibbonPanel panel, const String& name, bool visible = true)
+  RibbonPanel(const String& name, const bool visible = true)
   {
-    m_Panel   = panel;
     m_Name    = name;
     m_Visible = visible;
   };
 
   RibbonPanel(const RibbonPanel& right)
   {
-    m_Panel   = right.m_Panel;
     m_Name    = right.m_Name;
     m_Visible = right.m_Visible;
   };
 
   const RibbonPanel& operator = (const RibbonPanel& right)
   {
-    m_Panel   = right.m_Panel;
     m_Name    = right.m_Name;
     m_Visible = right.m_Visible;
     return (*this);
@@ -77,7 +54,7 @@ struct RibbonPanel
 
   bool operator == (const RibbonPanel& right) const
   {
-    return ((m_Panel == right.m_Panel) && (m_Name == right.m_Name) && (m_Visible == right.m_Visible));
+    return (m_Name == right.m_Name) && (m_Visible == right.m_Visible);
   };
 
   bool operator != (const RibbonPanel &right) const
@@ -94,7 +71,6 @@ public:
 
   typedef List<RibbonPanel> RibbonPanelList;
   typedef Dict<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
-  typedef Dict<eRibbonPanel, String> RibbonPanelMapOfEnumString;
 
   /**
    * Initializes the ribbon states.
@@ -122,12 +98,6 @@ public:
 
 private:
   RibbonTabList m_TabList;
-  RibbonPanelMapOfEnumString m_PanelMapOfEnumString;
-
-  /**
-   * Initializes a map of pairs Panel Enum - Panel String.
-   */
-  void InitializePanelMappingList();
 
   /**
    * Gets a list of panels in the tab.
@@ -139,11 +109,10 @@ private:
   /**
    * Adds panel to panel list.
    * @param[out] panels The panel list.
-   * @param[in] panel The panel index.
-   * @param[in] nameID The panel name.
-   * @param[in] visible The visible state.
+   * @param[in]  name The panel name.
+   * @param[in]  visible The visible state.
    */
-  void AddPanel(RibbonPanelList& panels, eRibbonPanel panel, String name, bool visible = true);
+  void AddPanel(RibbonPanelList& panels, String name, bool visible = true);
 };
 
 }; // namespace RibbonStates
