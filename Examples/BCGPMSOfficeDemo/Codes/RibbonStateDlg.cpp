@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "RibbonStateDlg.h"
 
+#include <BCGPMessageBox.h>
 #include <algorithm>
 
 const String& SelectedTab = L"SelectedTab";
@@ -25,7 +26,8 @@ void RibbonStateDlg::DoDataExchange(CDataExchange* pDX)
   DDX_Control(pDX, IDC_SELECTED_PANELS,  m_SelectedPanels);
 }
 
-RibbonStateDlg::RibbonStateDlg(CWnd* pParent) : CBCGPDialog(RibbonStateDlg::IDD, pParent)
+RibbonStateDlg::RibbonStateDlg(CWnd* pParent, UINT thePanelImageList)
+  : CBCGPDialog(RibbonStateDlg::IDD, pParent), m_PanelImageList16x16(thePanelImageList)
 {
   EnableVisualManagerStyle();
 }
@@ -45,6 +47,9 @@ BOOL RibbonStateDlg::OnInitDialog()
   FillTabList(m_Data);
 
   FillPanelListWithCurrentSelectedTab();
+
+  m_AvailablePanels.SetImageList(m_PanelImageList16x16, 16);
+  m_SelectedPanels.SetImageList(m_PanelImageList16x16, 16);
 
   return TRUE;
 }
@@ -88,16 +93,10 @@ void RibbonStateDlg::FillPanelListWithCurrentSelectedTab()
     auto& panels = *pRibbonPanelList;
     for (auto& e : panels)
     {
-      if (e.m_Visible)
-      {
-        int thePanelIndex = m_SelectedPanels.AddString(e.m_Name.c_str());
-        m_SelectedPanels.SetItemData(thePanelIndex, reinterpret_cast<DWORD_PTR>(&e));
-      }
-      else
-      {
-        int thePanelIndex = m_AvailablePanels.AddString(e.m_Name.c_str());
-        m_AvailablePanels.SetItemData(thePanelIndex, reinterpret_cast<DWORD_PTR>(&e));
-      }
+      auto& thePanelBox = e.m_Visible ? m_SelectedPanels : m_AvailablePanels;
+      int thePanelIndex = thePanelBox.AddString(e.m_Name.c_str());
+      thePanelBox.SetItemImage(thePanelIndex, e.m_Image);
+      thePanelBox.SetItemData(thePanelIndex, reinterpret_cast<DWORD_PTR>(&e));
     }
   }
 
@@ -205,6 +204,12 @@ void RibbonStateDlg::OnRemove()
 
 void RibbonStateDlg::OnReset()
 {
+  if (BCGPMessageBox(L"All your changes will be lost! Do you really want to reset ?",
+    MB_OKCANCEL | MB_ICONWARNING) == IDCANCEL)
+  {
+    return;
+  }
+
   UpdateData(TRUE);
 
   // Remember the previous tab.

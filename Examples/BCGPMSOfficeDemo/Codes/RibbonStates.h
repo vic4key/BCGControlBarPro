@@ -19,31 +19,35 @@ struct RibbonPanel
 {
   String m_Name;
   bool m_Visible;
+  int m_Image;
 
   RibbonPanel() = delete;
 
-  RibbonPanel(const String& name, const bool visible = true)
+  RibbonPanel(const String& name, const bool visible = true, const int image = -1)
   {
     m_Name    = name;
     m_Visible = visible;
+    m_Image   = image;
   };
 
   RibbonPanel(const RibbonPanel& right)
   {
     m_Name    = right.m_Name;
     m_Visible = right.m_Visible;
+    m_Image   = right.m_Image;
   };
 
   const RibbonPanel& operator = (const RibbonPanel& right)
   {
     m_Name    = right.m_Name;
     m_Visible = right.m_Visible;
+    m_Image   = right.m_Image;
     return (*this);
   };
 
   bool operator == (const RibbonPanel& right) const
   {
-    return (m_Name == right.m_Name) && (m_Visible == right.m_Visible);
+    return m_Name == right.m_Name;
   };
 
   bool operator != (const RibbonPanel &right) const
@@ -61,9 +65,9 @@ struct RibbonTab
 
   RibbonTab(RibbonPanelList& panels) : m_Panels(panels) {}
 
-  void AddPanel(const String& name, const bool visible = true)
+  void AddPanel(const String& name, const bool visible = true, const int image = -1)
   {
-    m_Panels.push_back(RibbonPanel(name, visible));
+    m_Panels.push_back(RibbonPanel(name, visible, image));
   }
 };
 

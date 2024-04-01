@@ -236,25 +236,25 @@ void CBCGPMSOfficeDemoApp::OnAppAbout()
   {
     if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Patient Tab"))
     {
-      pTab->AddPanel(L"Patient - Patient");
-      pTab->AddPanel(L"Patient - Patient Model");
-      pTab->AddPanel(L"Patient - Image Series");
+      pTab->AddPanel(L"Patient - Patient", false, 1);
+      pTab->AddPanel(L"Patient - Patient Model", true, 2);
+      pTab->AddPanel(L"Patient - Image Series", false, 3);
     }
     if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Image Tab"))
     {
-      pTab->AddPanel(L"Image - Fiducial Markers");
-      pTab->AddPanel(L"Image - Patient Origin");
-      pTab->AddPanel(L"Image - Imaging Center");
+      pTab->AddPanel(L"Image - Fiducial Markers", true, 1);
+      pTab->AddPanel(L"Image - Patient Origin", false, 2);
+      pTab->AddPanel(L"Image - Imaging Center", true, 3);
     }
     if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Fusion Tab"))
     {
-      pTab->AddPanel(L"Fusion - View");
-      pTab->AddPanel(L"Fusion - Registration");
-      pTab->AddPanel(L"Fusion - Auto Fiducial Markers");
+      pTab->AddPanel(L"Fusion - View", false, 1);
+      pTab->AddPanel(L"Fusion - Registration", false, 2);
+      pTab->AddPanel(L"Fusion - Auto Fiducial Markers", false, 3);
     }
   }
 
-  RibbonStateDlg dialog(m_pMainWnd);
+  RibbonStateDlg dialog(m_pMainWnd, IDB_BS_HELP_LIST_16);
   dialog.DoModal();
 }
 

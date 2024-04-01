@@ -11,7 +11,7 @@ class RibbonStateDlg : public CBCGPDialog
   DECLARE_DYNAMIC(RibbonStateDlg)
 
 public:
-  RibbonStateDlg(CWnd* pParent = nullptr);
+  RibbonStateDlg(CWnd* pParent = nullptr, UINT thePanelImageList16x16 = -1);
   virtual ~RibbonStateDlg();
 
   enum { IDD = IDD_OPTIONS };
@@ -20,6 +20,7 @@ private:
   CBCGPComboBox m_RibbonTabs;
   CBCGPListBox  m_AvailablePanels;
   CBCGPListBox  m_SelectedPanels;
+  UINT m_PanelImageList16x16;
 
   RibbonTabList m_Data;
   RibbonTabList m_BackupData;
