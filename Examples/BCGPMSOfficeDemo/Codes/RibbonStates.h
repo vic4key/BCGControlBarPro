@@ -6,9 +6,10 @@
 
 #include "SingletonT.h"
 
-using String  = std::wstring;
-using resid_t = unsigned int;
+using String = std::wstring;
 
+#define List std::vector
+#define Dict std::unordered_map
 
 enum eRibbonTabIndex
 {
@@ -38,9 +39,6 @@ enum eRibbonPanel
 
 namespace RibbonStates
 {
-
-static const wchar_t TabPrefix[] = L"RibbonTab_";
-static const wchar_t PanelPrefix[] = L"RibbonPanel_";
 
 struct RibbonPanel
 {
@@ -94,9 +92,9 @@ public:
   CRibbonTabs();
   virtual ~CRibbonTabs();
 
-  typedef std::vector<RibbonPanel> RibbonPanelList;
-  typedef std::unordered_map<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
-  typedef std::unordered_map<eRibbonPanel, String> RibbonPanelMapOfEnumString;
+  typedef List<RibbonPanel> RibbonPanelList;
+  typedef Dict<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
+  typedef Dict<eRibbonPanel, String> RibbonPanelMapOfEnumString;
 
   /**
    * Initializes the ribbon states.
