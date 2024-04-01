@@ -5,16 +5,16 @@
 
 const String& SelectedTab = L"SelectedTab";
 
-IMPLEMENT_DYNAMIC(CRibbonStateDlg, CBCGPDialogP)
+IMPLEMENT_DYNAMIC(RibbonStateDlg, CBCGPDialog)
 
-BEGIN_MESSAGE_MAP(CRibbonStateDlg, CBCGPDialogP)
+BEGIN_MESSAGE_MAP(RibbonStateDlg, CBCGPDialog)
   ON_CBN_SELCHANGE(IDC_TABS, OnSelchangeRibbonTabs)
   ON_BN_CLICKED(IDC_ADD, OnAdd)
   ON_BN_CLICKED(IDC_REMOVE, OnRemove)
   ON_BN_CLICKED(IDC_RESET, OnReset)
 END_MESSAGE_MAP()
 
-void CRibbonStateDlg::DoDataExchange(CDataExchange* pDX)
+void RibbonStateDlg::DoDataExchange(CDataExchange* pDX)
 {
   __super::DoDataExchange(pDX);
   DDX_Control(pDX, IDC_TABS, m_RibbonTabs);
@@ -22,20 +22,20 @@ void CRibbonStateDlg::DoDataExchange(CDataExchange* pDX)
   DDX_Control(pDX, IDC_SELECTED_PANELS,  m_SelectedPanels);
 }
 
-CRibbonStateDlg::CRibbonStateDlg(CWnd* pParent) : CBCGPDialogP(CRibbonStateDlg::IDD, pParent)
+RibbonStateDlg::RibbonStateDlg(CWnd* pParent) : CBCGPDialog(RibbonStateDlg::IDD, pParent)
 {
   EnableVisualManagerStyle();
 }
 
-CRibbonStateDlg::~CRibbonStateDlg()
+RibbonStateDlg::~RibbonStateDlg()
 {
 }
 
-BOOL CRibbonStateDlg::OnInitDialog()
+BOOL RibbonStateDlg::OnInitDialog()
 {
   __super::OnInitDialog();
 
-  auto& tabs = CRibbonTabs::GetpInstance()->GetTabList();
+  auto& tabs = RibbonTabs::GetpInstance()->GetTabList();
   m_Data = tabs;
   m_BackupData = tabs;
 
@@ -46,7 +46,7 @@ BOOL CRibbonStateDlg::OnInitDialog()
   return TRUE;
 }
 
-void CRibbonStateDlg::FillTabList(CRibbonTabs::RibbonTabList& tabs)
+void RibbonStateDlg::FillTabList(RibbonTabList& tabs)
 {
   UpdateData(TRUE);
 
@@ -54,8 +54,7 @@ void CRibbonStateDlg::FillTabList(CRibbonTabs::RibbonTabList& tabs)
 
   for (auto& tab : tabs)
   {
-    auto temp = CRibbonTabs::GetpInstance()->GetTabName(tab.first);
-    int idx = m_RibbonTabs.AddString(temp.c_str());
+    int idx = m_RibbonTabs.AddString(tab.first.c_str());
     m_RibbonTabs.SetItemData(idx, reinterpret_cast<DWORD_PTR>(&tab));
   }
 
@@ -67,7 +66,7 @@ void CRibbonStateDlg::FillTabList(CRibbonTabs::RibbonTabList& tabs)
   UpdateData(FALSE);
 }
 
-void CRibbonStateDlg::FillPanelListWithCurrentSelectedTab(bool updateButtons)
+void RibbonStateDlg::FillPanelListWithCurrentSelectedTab()
 {
   UpdateData(TRUE);
 
@@ -78,7 +77,7 @@ void CRibbonStateDlg::FillPanelListWithCurrentSelectedTab(bool updateButtons)
   theTabIndex = (theTabIndex == CB_ERR ? 0 : theTabIndex);
   auto pItemData = m_RibbonTabs.GetItemData(theTabIndex);
 
-  auto pRibbonTab = reinterpret_cast<CRibbonTabs::RibbonTabList::value_type*>(pItemData);
+  auto pRibbonTab = reinterpret_cast<RibbonTabList::value_type*>(pItemData);
   auto pRibbonPanelList = reinterpret_cast<RibbonPanelList*>(&pRibbonTab->second);
 
   if (pRibbonPanelList != nullptr)
@@ -111,13 +110,10 @@ void CRibbonStateDlg::FillPanelListWithCurrentSelectedTab(bool updateButtons)
 
   UpdateData(FALSE);
 
-  if (updateButtons)
-  {
-    UpdateButtons();
-  }
+  UpdateButtons();
 }
 
-void CRibbonStateDlg::UpdateButtons()
+void RibbonStateDlg::UpdateButtons()
 {
   UpdateData(TRUE);
 
@@ -132,33 +128,25 @@ void CRibbonStateDlg::UpdateButtons()
     auto pItemData = m_RibbonTabs.GetItemData(idx);
     auto pRibbonTab = reinterpret_cast<RibbonTabList::value_type*>(pItemData);
     auto pRibbonPanelList = reinterpret_cast<RibbonPanelList*>(&pRibbonTab->second);
-    auto& panels = *pRibbonPanelList;
-    const auto NumVisiblePanels = std::count_if(panels.cbegin(), panels.cend(),
+    const auto NumVisiblePanels = std::count_if(pRibbonPanelList->cbegin(), pRibbonPanelList->cend(),
       [](const RibbonPanel& panel) -> bool { return panel.m_Visible; });
     pRemoveButton->EnableWindow(NumVisiblePanels > 0);
   }
 }
 
-void CRibbonStateDlg::OnOK()
+void RibbonStateDlg::OnOK()
 {
-  CRibbonTabs::GetpInstance()->SetTabList(m_Data);
+  RibbonTabs::GetpInstance()->SetTabList(m_Data);
 
   __super::OnOK();
 }
 
-void CRibbonStateDlg::OnCancel()
-{
-  CRibbonTabs::GetpInstance()->SetTabList(m_BackupData);
-
-  __super::OnCancel();
-}
-
-void CRibbonStateDlg::OnSelchangeRibbonTabs()
+void RibbonStateDlg::OnSelchangeRibbonTabs()
 {
   FillPanelListWithCurrentSelectedTab();
 }
 
-void CRibbonStateDlg::OnAdd()
+void RibbonStateDlg::OnAdd()
 {
   UpdateData(TRUE);
 
@@ -179,7 +167,7 @@ void CRibbonStateDlg::OnAdd()
   FillPanelListWithCurrentSelectedTab();
 }
 
-void CRibbonStateDlg::OnRemove()
+void RibbonStateDlg::OnRemove()
 {
   UpdateData(TRUE);
 
@@ -200,7 +188,7 @@ void CRibbonStateDlg::OnRemove()
   FillPanelListWithCurrentSelectedTab();
 }
 
-void CRibbonStateDlg::OnReset()
+void RibbonStateDlg::OnReset()
 {
   UpdateData(TRUE);
 

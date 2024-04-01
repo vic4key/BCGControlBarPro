@@ -4,51 +4,28 @@
 namespace RibbonStates
 {
 
-CRibbonTabs::CRibbonTabs()
+RibbonTabs::RibbonTabs()
 {
   Initialize();
 }
 
-CRibbonTabs::~CRibbonTabs()
+RibbonTabs::~RibbonTabs()
 {
 }
 
-RibbonStates::CRibbonTabs::RibbonTabList& CRibbonTabs::GetTabList()
+RibbonStates::RibbonTabs::RibbonTabList& RibbonTabs::GetTabList()
 {
   return m_TabList;
 }
 
-void CRibbonTabs::SetTabList(RibbonTabList& tabs)
+void RibbonTabs::SetTabList(RibbonTabList& tabs)
 {
   m_TabList = tabs;
 }
 
-String CRibbonTabs::GetTabName(eRibbonTabIndex tab) const
-{
-  String result = L"";
-
-  switch (tab)
-  {
-  case RIBBON_PATIENT_TAB:
-    result = L"Patient Tab";
-    break;
-  case RIBBON_IMAGES_TAB:
-    result = L"Image Tab";
-    break;
-  case RIBBON_FUSION_TAB:
-    result = L"Fusion Tab";
-    break;
-  default:
-    break;
-  }
-
-  return result;
-}
-
-CRibbonTabs::RibbonPanelList* CRibbonTabs::GetpPanelList(eRibbonTabIndex tab)
+RibbonTabs::RibbonPanelList* RibbonTabs::GetpPanelList(const String& tab)
 {
   auto it = m_TabList.find(tab);
-
   if (it == m_TabList.end())
   {
     return nullptr;
@@ -57,12 +34,12 @@ CRibbonTabs::RibbonPanelList* CRibbonTabs::GetpPanelList(eRibbonTabIndex tab)
   return &(it->second);
 }
 
-void CRibbonTabs::AddPanel(RibbonPanelList& panels, String name, bool visible)
+void RibbonTabs::AddPanel(RibbonPanelList& panels, String name, bool visible)
 {
   panels.push_back(RibbonPanel(name, visible));
 }
 
-void CRibbonTabs::Initialize()
+void RibbonTabs::Initialize()
 {
   m_TabList.clear();
 
@@ -72,7 +49,7 @@ void CRibbonTabs::Initialize()
     AddPanel(panels, L"Patient - Patient");
     AddPanel(panels, L"Patient - Patient Model");
     AddPanel(panels, L"Patient - Image Series");
-    m_TabList[eRibbonTabIndex::RIBBON_PATIENT_TAB] = panels;
+    m_TabList.insert({ L"Patient Tab",  panels });
   }
   // Image Tab
   {
@@ -80,7 +57,7 @@ void CRibbonTabs::Initialize()
     AddPanel(panels, L"Image - Fiducial Markers");
     AddPanel(panels, L"Image - Patient Origin");
     AddPanel(panels, L"Image - Imaging Center");
-    m_TabList[eRibbonTabIndex::RIBBON_IMAGES_TAB] = panels;
+    m_TabList.insert({ L"Image Tab", panels });
   }
   // Fusion Tab
   {
@@ -88,7 +65,7 @@ void CRibbonTabs::Initialize()
     AddPanel(panels, L"Fusion - View");
     AddPanel(panels, L"Fusion - Registration");
     AddPanel(panels, L"Fusion - Auto Fiducial Markers");
-    m_TabList[eRibbonTabIndex::RIBBON_FUSION_TAB] = panels;
+    m_TabList.insert({ L"Fusion Tab", panels });
   }
 }
 

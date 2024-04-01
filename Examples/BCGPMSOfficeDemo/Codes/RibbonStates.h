@@ -1,23 +1,14 @@
 #pragma once
 
+#include "SingletonT.h"
+
 #include <string>
 #include <vector>
 #include <unordered_map>
 
-#include "SingletonT.h"
-
-using String = std::wstring;
-
+#define String std::wstring
 #define List std::vector
 #define Dict std::unordered_map
-
-enum eRibbonTabIndex
-{
-  RIBBON_PATIENT_TAB,
-  RIBBON_IMAGES_TAB,
-  RIBBON_FUSION_TAB,
-  RIBBON_NUM_TAB
-};
 
 namespace RibbonStates
 {
@@ -63,14 +54,14 @@ struct RibbonPanel
   }
 };
 
-class CRibbonTabs : public SingletonT<CRibbonTabs>
+class RibbonTabs : public SingletonT<RibbonTabs>
 {
 public:
-  CRibbonTabs();
-  virtual ~CRibbonTabs();
+  RibbonTabs();
+  virtual ~RibbonTabs();
 
   typedef List<RibbonPanel> RibbonPanelList;
-  typedef Dict<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
+  typedef Dict<String, RibbonPanelList> RibbonTabList;
 
   /**
    * Initializes the ribbon states.
@@ -89,22 +80,15 @@ public:
    */
   void SetTabList(RibbonTabList& tabs);
 
-  /**
-   * Gets the tab name.
-   * @param[in] tab The tab index.
-   * @return The tab name.
-   */
-  String GetTabName(eRibbonTabIndex tab) const;
-
 private:
   RibbonTabList m_TabList;
 
   /**
    * Gets a list of panels in the tab.
-   * @param[in] tab The tab index.
+   * @param[in]  tab The tab name.
    * @return The list of panels in the tab.
    */
-  RibbonPanelList* GetpPanelList(eRibbonTabIndex tab);
+  RibbonPanelList* GetpPanelList(const String& tab);
 
   /**
    * Adds panel to panel list.

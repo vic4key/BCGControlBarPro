@@ -232,7 +232,7 @@ void CBCGPMSOfficeDemoApp::OnAppAbout()
   //TestDialog dialog(m_pMainWnd);
   //dialog.DoModal();
 
-  CRibbonStateDlg dialog(m_pMainWnd);
+  RibbonStateDlg dialog(m_pMainWnd);
   dialog.DoModal();
 }
 
