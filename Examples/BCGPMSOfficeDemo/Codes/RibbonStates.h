@@ -97,7 +97,6 @@ public:
   typedef std::vector<RibbonPanel> RibbonPanelList;
   typedef std::unordered_map<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
   typedef std::unordered_map<eRibbonPanel, String> RibbonPanelMapOfEnumString;
-  typedef std::unordered_map<eRibbonPanel, resid_t> RibbonPanelMapOfEnumResource;
 
   /**
    * Initializes the ribbon states.
@@ -182,9 +181,7 @@ public:
 
 private:
   RibbonTabList m_TabList;
-
   RibbonPanelMapOfEnumString m_PanelMapOfEnumString;
-  RibbonPanelMapOfEnumResource m_PanelMapOfEnumResource;
 
   /**
    * Initializes a map of pairs Panel Enum - Panel String.
