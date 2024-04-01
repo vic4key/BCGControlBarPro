@@ -232,21 +232,21 @@ void CBCGPMSOfficeDemoApp::OnAppAbout()
   //TestDialog dialog(m_pMainWnd);
   //dialog.DoModal();
 
-  if (RibbonStates::RibbonTabs::GetpInstance()->GetTabList().empty())
+  if (RibbonTabs::GetpInstance()->GetTabList().empty())
   {
-    if (auto pTab = RibbonStates::RibbonTabs::GetpInstance()->AddTab(L"Patient Tab"))
+    if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Patient Tab"))
     {
       pTab->AddPanel(L"Patient - Patient");
       pTab->AddPanel(L"Patient - Patient Model");
       pTab->AddPanel(L"Patient - Image Series");
     }
-    if (auto pTab = RibbonStates::RibbonTabs::GetpInstance()->AddTab(L"Image Tab"))
+    if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Image Tab"))
     {
       pTab->AddPanel(L"Image - Fiducial Markers");
       pTab->AddPanel(L"Image - Patient Origin");
       pTab->AddPanel(L"Image - Imaging Center");
     }
-    if (auto pTab = RibbonStates::RibbonTabs::GetpInstance()->AddTab(L"Fusion Tab"))
+    if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Fusion Tab"))
     {
       pTab->AddPanel(L"Fusion - View");
       pTab->AddPanel(L"Fusion - Registration");
