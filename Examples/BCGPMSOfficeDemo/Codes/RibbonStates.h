@@ -104,18 +104,6 @@ public:
   void Initialize();
 
   /**
-   * Loads ribbon states.
-   * @return true if succeed otherwise false.
-   */
-  bool Load();
-
-  /**
-   * Stores ribbon states.
-   * @return true if succeed otherwise false.
-   */
-  bool Store();
-
-  /**
    * Gets the tab list.
    * @return The tab list.
    */
