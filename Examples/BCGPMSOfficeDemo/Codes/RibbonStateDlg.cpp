@@ -12,6 +12,9 @@ BEGIN_MESSAGE_MAP(RibbonStateDlg, CBCGPDialog)
   ON_BN_CLICKED(IDC_ADD, OnAdd)
   ON_BN_CLICKED(IDC_REMOVE, OnRemove)
   ON_BN_CLICKED(IDC_RESET, OnReset)
+  ON_BN_CLICKED(IDC_UP, OnUp)
+  ON_BN_CLICKED(IDC_DOWN, OnDown)
+  ON_LBN_SELCHANGE(IDC_SELECTED_PANELS, OnLbnSelchangeSelectedPanels)
 END_MESSAGE_MAP()
 
 void RibbonStateDlg::DoDataExchange(CDataExchange* pDX)
@@ -132,6 +135,18 @@ void RibbonStateDlg::UpdateButtons()
       [](const RibbonPanel& panel) -> bool { return panel.m_Visible; });
     pRemoveButton->EnableWindow(NumVisiblePanels > 0);
   }
+
+  if (auto pUpButton = GetDlgItem(IDC_UP))
+  {
+    int iCurSel = m_SelectedPanels.GetCurSel();
+    pUpButton->EnableWindow(!(iCurSel == LB_ERR || iCurSel == 0));
+  }
+
+  if (auto pUpButton = GetDlgItem(IDC_DOWN))
+  {
+    int iCurSel = m_SelectedPanels.GetCurSel();
+    pUpButton->EnableWindow(!(iCurSel == LB_ERR || iCurSel == m_SelectedPanels.GetCount() - 1));
+  }
 }
 
 void RibbonStateDlg::OnOK()
@@ -206,4 +221,17 @@ void RibbonStateDlg::OnReset()
   UpdateData(FALSE);
 
   FillPanelListWithCurrentSelectedTab();
+}
+
+void RibbonStateDlg::OnUp()
+{
+}
+
+void RibbonStateDlg::OnDown()
+{
+}
+
+void RibbonStateDlg::OnLbnSelchangeSelectedPanels()
+{
+  UpdateButtons();
 }

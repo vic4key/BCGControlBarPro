@@ -38,5 +38,8 @@ protected:
   afx_msg void OnAdd();
   afx_msg void OnRemove();
   afx_msg void OnReset();
+  afx_msg void OnUp();
+  afx_msg void OnDown();
+  afx_msg void OnLbnSelchangeSelectedPanels();
   DECLARE_MESSAGE_MAP()
 };
