@@ -58,54 +58,6 @@ CRibbonTabs::RibbonPanelList* CRibbonTabs::GetpPanelList(eRibbonTabIndex tab)
   return &(it->second);
 }
 
-RibbonPanel* CRibbonTabs::GetpPanel(eRibbonTabIndex tab, eRibbonPanel panel)
-{
-  RibbonPanel* result = nullptr;
-
-  auto pPanelList = GetpPanelList(tab);
-  if (pPanelList == nullptr)
-  {
-    return nullptr;
-  }
-
-  auto& panels = *pPanelList;
-
-  for (auto& e : panels)
-  {
-    if (e.m_Panel == panel)
-    {
-      result = &e;
-      break;
-    }
-  }
-
-  return result;
-}
-
-bool CRibbonTabs::IsVisible(eRibbonTabIndex tab, eRibbonPanel panel)
-{
-  auto pPanel = GetpPanel(tab, panel);
-
-  if (pPanel == nullptr)
-  {
-    return false;
-  }
-
-  return pPanel->m_Visible;
-}
-
-void CRibbonTabs::SetVisible(eRibbonTabIndex tab, eRibbonPanel panel, bool visible)
-{
-  auto pPanel = GetpPanel(tab, panel);
-
-  if (pPanel == nullptr)
-  {
-    return;
-  }
-
-  pPanel->m_Visible = visible;
-}
-
 void CRibbonTabs::AddPanel(RibbonPanelList& panels, eRibbonPanel panel, String name, bool visible)
 {
   panels.push_back(RibbonPanel(panel, name, visible));

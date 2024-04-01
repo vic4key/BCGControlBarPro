@@ -120,30 +120,6 @@ public:
    */
   String GetTabName(eRibbonTabIndex tab) const;
 
-  /**
-   * Gets a panel in tab.
-   * @param[in] tab The tab index.
-   * @param[in] panel The panel index.
-   * @return The pointer of the panel.
-   */
-  RibbonPanel* GetpPanel(eRibbonTabIndex tab, eRibbonPanel panel);
-
-  /**
-   * Gets the panel visible state.
-   * @param[in] tab The tab index.
-   * @param[in] panel The panel index.
-   * @return The panel visible state.
-   */
-  bool IsVisible(eRibbonTabIndex tab, eRibbonPanel panel);
-
-  /**
-   * Sets the panel visible state.
-   * @param[in] tab The tab index.
-   * @param[in] panel The panel index.
-   * @param[in] visible The visible state.
-   */
-  void SetVisible(eRibbonTabIndex tab, eRibbonPanel panel, bool visible);
-
 private:
   RibbonTabList m_TabList;
   RibbonPanelMapOfEnumString m_PanelMapOfEnumString;
