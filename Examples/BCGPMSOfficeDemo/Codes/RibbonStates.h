@@ -36,41 +36,6 @@ enum eRibbonPanel
   PanelCount
 };
 
-// Patient Tab
-const resid_t IDS_PATIENT_TAB = 101;
-const resid_t IDS_PATIENT_MODELS = 102;
-const resid_t IDS_DEF_IMAGE_SERIES = 103;
-// Image Tab
-const resid_t IDS_FIDUCIAL_MARKERS = 201;
-const resid_t IDS_PATIENT_ORIGIN = 202;
-const resid_t IDS_IMAGING_CENTER = 203;
-// Fusion Tab
-const resid_t IDS_FUSION_VIEW = 301;
-const resid_t IDS_REGISTRATION = 302;
-const resid_t IDS_AUTO_FIDUCIAL_MARKER = 303;
-
-static std::unordered_map<resid_t, std::wstring> IDS_STR_MAPPING = {
-  // Patient Tab
-  { IDS_PATIENT_TAB, L"Patient - Patient" },
-  { IDS_PATIENT_MODELS, L"Patient - Patient Model" },
-  { IDS_DEF_IMAGE_SERIES, L"Patient - Image Series" },
-  // Image Tab
-  { IDS_FIDUCIAL_MARKERS, L"Image - Fiducial Markers" },
-  { IDS_PATIENT_ORIGIN, L"Image - Patient Origin" },
-  { IDS_IMAGING_CENTER, L"Image - Imaging Center" },
-  // Fusion Tab
-  { IDS_FUSION_VIEW, L"Fusion - View" },
-  { IDS_REGISTRATION, L"Fusion - Registration" },
-  { IDS_AUTO_FIDUCIAL_MARKER, L"Fusion - Auto Fiducial Markers" },
-};
-
-inline std::wstring LoadRCString(const resid_t id)
-{
-  return IDS_STR_MAPPING[id];
-}
-
-
-
 namespace RibbonStates
 {
 
@@ -232,15 +197,6 @@ private:
    * @return The list of panels in the tab.
    */
   RibbonPanelList* GetpPanelList(eRibbonTabIndex tab);
-
-  /**
-   * Adds panel to panel list.
-   * @param[out] panels The panel list.
-   * @param[in] panel The panel index.
-   * @param[in] nameID The resource id of the panel name.
-   * @param[in] visible The visible state.
-   */
-  void AddPanel(RibbonPanelList& panels, eRibbonPanel panel, resid_t nameID, bool visible = true);
 
   /**
    * Adds panel to panel list.
