@@ -21,6 +21,7 @@
 #include "BCGPMSOfficeDemoView.h"
 #include "RibbonTooltipCtrl.h"
 #include "Codes/TestDialog.h"
+#include "Codes/RibbonStateDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -228,7 +229,10 @@ void CBCGPMSOfficeDemoApp::OnAppAbout()
 {
 	//BCGPShowAboutDlg (AFX_IDS_APP_TITLE);
 
-  TestDialog dialog(m_pMainWnd);
+  //TestDialog dialog(m_pMainWnd);
+  //dialog.DoModal();
+
+  CRibbonStateDlg dialog(m_pMainWnd);
   dialog.DoModal();
 }
 
