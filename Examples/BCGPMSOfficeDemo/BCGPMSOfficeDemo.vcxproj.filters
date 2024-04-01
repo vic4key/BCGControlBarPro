@@ -205,9 +205,6 @@
     <ClInclude Include="Codes\SingletonT.h">
       <Filter>Codes</Filter>
     </ClInclude>
-    <ClInclude Include="Codes\PantherRibbonBar.h">
-      <Filter>Codes</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\Background1.png">

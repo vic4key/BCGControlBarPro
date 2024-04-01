@@ -47,9 +47,9 @@ void CRibbonTabs::SetTabList(RibbonTabList& tabs)
   m_TabList = tabs;
 }
 
-CStringP CRibbonTabs::GetTabName(eRibbonTabIndex tab) const
+String CRibbonTabs::GetTabName(eRibbonTabIndex tab) const
 {
-  CStringP result = L"";
+  String result = L"";
 
   switch (tab)
   {
@@ -129,212 +129,16 @@ void CRibbonTabs::SetVisible(eRibbonTabIndex tab, eRibbonPanel panel, bool visib
   pPanel->m_Visible = visible;
 }
 
-void CRibbonTabs::UpdateProSIMSettings()
+void CRibbonTabs::AddPanel(RibbonPanelList& panels, eRibbonPanel panel, String name, bool visible)
 {
-  // TODO: Vic. Temporary. Save settings.
-}
-
-CStringP CRibbonTabs::TabEnumToString(eRibbonTabIndex tab, const CStringP& prefix)
-{
-  CStringP result = prefix;
-  result += GetTabName(tab);
-  return result;
-}
-
-CStringP CRibbonTabs::PanelEnumToString(eRibbonPanel panel, const CStringP& prefix)
-{
-  CStringP result = prefix;
-  result += m_PanelMapOfEnumString[panel];
-  return result;
-}
-
-RibbonStates::eRibbonPanel CRibbonTabs::PanelStringToEnum(const CStringP& name)
-{
-  eRibbonPanel result = eRibbonPanel::PanelCount;
-
-  for (auto& e : m_PanelMapOfEnumString)
-  {
-    if (e.second == name)
-    {
-      result = e.first;
-      break;
-    }
-  }
-
-  return result;
-}
-
-CStringP CRibbonTabs::PanelGetResourceString(eRibbonPanel panel)
-{
-  CStringP result = L"";
-  result = LoadRCString(m_PanelMapOfEnumResource[panel]);
-  return result;
-}
-
-void CRibbonTabs::AddPanel(RibbonPanelList& panels, eRibbonPanel panel, CStringP name, bool visible)
-{
-  //name = name.Strip(CStringP::Both);
   panels.push_back(RibbonPanel(panel, name, visible));
 }
 
 void CRibbonTabs::AddPanel(RibbonPanelList& panels, eRibbonPanel panel, resid_t nameID, bool visible)
 {
-  CStringP name;
+  String name;
   name = LoadRCString(nameID);
   AddPanel(panels, panel, name, visible);
-}
-
-bool CRibbonTabs::Load()
-{
-  /*auto fnExtractPanelEnumName = [](CSetting* pSection) -> CStringP
-  {
-    CStringP result = L"";
-
-    if (pSection == nullptr)
-    {
-      return result;
-    }
-
-    auto name = pSection->GetName();
-
-    if (name.Contains(PanelPrefix))
-    {
-      result = name.Right(name.Length() - lstrlenW(PanelPrefix));
-      result = result.Strip(CStringP::Both);
-    }
-
-    return result;
-  };
-
-  auto pProSIMSettings = GetpProSIMSettings();
-  if (pProSIMSettings == nullptr)
-  {
-    return false;
-  }
-
-  int numTabs = int(eRibbonTabIndex::RIBBON_NUM_TAB);
-
-  for (int i = 0; i < numTabs; i++)
-  {
-    // for each Tab Section
-
-    auto tab = eRibbonTabIndex(i);
-
-    auto nameTabSection = TabEnumToString(tab);
-    auto pTabSection = pProSIMSettings->FindSetting(nameTabSection);
-    if (pTabSection == nullptr)
-    {
-      continue;
-    }
-
-    RibbonPanelList panels;
-
-    CLCursor<CSetting> pPanelSectionsC(pTabSection->GetpSettings());
-    while (auto pPanelSection = pPanelSectionsC())
-    {
-      // for each Panel Section
-
-      auto pPanelVisible = pPanelSection->FindSetting(PanelVisibleSetting, true);
-      if (pPanelVisible == nullptr)
-      {
-        continue;
-      }
-
-      auto panelEnumName = fnExtractPanelEnumName(pPanelSection);
-      if (panelEnumName.Length() == 0)
-      {
-        continue;
-      }
-
-      auto panel = PanelStringToEnum(panelEnumName);
-      if (panel == eRibbonPanel::PanelCount)
-      {
-        continue;
-      }
-
-      auto name  = PanelGetResourceString(panel);
-      if (name.Length() == 0)
-      {
-        continue;
-      }
-
-      auto visible = pPanelVisible->GetBoolValue();
-
-      // for specific cases
-      if (!IsPanelAvailable(panel))
-      {
-        visible = false;
-      }
-
-      // Update visible panel state.
-      SetVisible(tab, panel, visible);
-    }
-
-    if (!panels.empty())
-    {
-      std::sort(panels.begin(), panels.end(), [](const RibbonPanel& v1, const RibbonPanel& v2) -> bool
-      {
-        return int(v1.m_Panel) < int(v2.m_Panel);
-      });
-
-      m_TabList[tab] = panels;
-    }
-  }*/
-
-  return true;
-}
-
-void CRibbonTabs::Reload()
-{
-  Initialize();
-  Load();
-  //CProSIM::UpdateAllViews(nullptr, UV_ACTIVATE_RIBBON);
-}
-
-bool CRibbonTabs::Store()
-{
-  /*auto pProSIMSettings = GetpProSIMSettings();
-  if (pProSIMSettings == nullptr)
-  {
-    return false;
-  }
-
-  for (auto& tab : m_TabList)
-  {
-    // for each Tab Section
-
-    auto nameTabSection = TabEnumToString(tab.first);
-    auto pTabSection = pProSIMSettings->FindSetting(nameTabSection);
-    if (pTabSection == nullptr)
-    {
-      pTabSection = new CSetting(nameTabSection);
-      pProSIMSettings->AddSetting(pTabSection);
-    }
-
-    for (auto& panel : tab.second)
-    {
-      // for each Panel Section
-      auto sPanelSection = PanelEnumToString(panel.m_Panel);
-      auto pPanelSection = pTabSection->FindSetting(sPanelSection);
-      if (pPanelSection == nullptr)
-      {
-        pPanelSection = new CSetting(sPanelSection); 
-        pTabSection->AddSetting(pPanelSection);
-      }
-      auto pVisibleSetting = pPanelSection->FindSetting(PanelVisibleSetting);
-      if (pVisibleSetting == nullptr)
-      {
-        pVisibleSetting = new CSetting(PanelVisibleSetting, panel.m_Visible);
-        pPanelSection->AddSetting(pVisibleSetting);
-      }
-      else
-      {
-        pVisibleSetting->SetBoolValue(panel.m_Visible);
-      }
-    }
-  }*/
-
-  return true;
 }
 
 void CRibbonTabs::Initialize()

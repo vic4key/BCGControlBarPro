@@ -1,14 +1,75 @@
 #pragma once
 
-#include <map>
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 #include "SingletonT.h"
-#include "PantherRibbonBar.h"
 
-using CStringP = std::wstring;
-using resid_t  = unsigned int;
+using String  = std::wstring;
+using resid_t = unsigned int;
+
+
+enum eRibbonTabIndex
+{
+  RIBBON_PATIENT_TAB,
+  RIBBON_IMAGES_TAB,
+  RIBBON_FUSION_TAB,
+  RIBBON_NUM_TAB
+};
+
+enum eRibbonPanel
+{
+  // Patient Tab
+  PatientPatient,
+  PatientPatientModels,
+  PatientImageSeries,
+  // Image Tab
+  ImageFiducialMarkers,
+  ImagePatientOrigin,
+  ImageImagingCenter,
+  // Fusion Tab
+  FusionView,
+  FusionRegistration,
+  FusionAutoFiducialMarker,
+  // Count
+  PanelCount
+};
+
+// Patient Tab
+const resid_t IDS_PATIENT_TAB = 101;
+const resid_t IDS_PATIENT_MODELS = 102;
+const resid_t IDS_DEF_IMAGE_SERIES = 103;
+// Image Tab
+const resid_t IDS_FIDUCIAL_MARKERS = 201;
+const resid_t IDS_PATIENT_ORIGIN = 202;
+const resid_t IDS_IMAGING_CENTER = 203;
+// Fusion Tab
+const resid_t IDS_FUSION_VIEW = 301;
+const resid_t IDS_REGISTRATION = 302;
+const resid_t IDS_AUTO_FIDUCIAL_MARKER = 303;
+
+static std::unordered_map<resid_t, std::wstring> IDS_STR_MAPPING = {
+  // Patient Tab
+  { IDS_PATIENT_TAB, L"Patient - Patient" },
+  { IDS_PATIENT_MODELS, L"Patient - Patient Model" },
+  { IDS_DEF_IMAGE_SERIES, L"Patient - Image Series" },
+  // Image Tab
+  { IDS_FIDUCIAL_MARKERS, L"Image - Fiducial Markers" },
+  { IDS_PATIENT_ORIGIN, L"Image - Patient Origin" },
+  { IDS_IMAGING_CENTER, L"Image - Imaging Center" },
+  // Fusion Tab
+  { IDS_FUSION_VIEW, L"Fusion - View" },
+  { IDS_REGISTRATION, L"Fusion - Registration" },
+  { IDS_AUTO_FIDUCIAL_MARKER, L"Fusion - Auto Fiducial Markers" },
+};
+
+inline std::wstring LoadRCString(const resid_t id)
+{
+  return IDS_STR_MAPPING[id];
+}
+
+
 
 namespace RibbonStates
 {
@@ -19,34 +80,34 @@ static const wchar_t PanelPrefix[] = L"RibbonPanel_";
 struct RibbonPanel
 {
   eRibbonPanel m_Panel;
-  CStringP m_Name;
+  String m_Name;
   bool m_Visible;
 
   RibbonPanel()
   {
-    m_Panel = eRibbonPanel::PanelCount;
-    m_Name  = L"";
+    m_Panel   = eRibbonPanel::PanelCount;
+    m_Name    = L"";
     m_Visible = false;
   };
 
-  RibbonPanel(const eRibbonPanel panel, const CStringP& name, bool visible = true)
+  RibbonPanel(const eRibbonPanel panel, const String& name, bool visible = true)
   {
-    m_Panel = panel;
-    m_Name  = name;
+    m_Panel   = panel;
+    m_Name    = name;
     m_Visible = visible;
   };
 
   RibbonPanel(const RibbonPanel& right)
   {
-    m_Panel = right.m_Panel;
-    m_Name  = right.m_Name;
+    m_Panel   = right.m_Panel;
+    m_Name    = right.m_Name;
     m_Visible = right.m_Visible;
   };
 
   const RibbonPanel& operator = (const RibbonPanel& right)
   {
-    m_Panel = right.m_Panel;
-    m_Name  = right.m_Name;
+    m_Panel   = right.m_Panel;
+    m_Name    = right.m_Name;
     m_Visible = right.m_Visible;
     return (*this);
   };
@@ -69,9 +130,9 @@ public:
   virtual ~CRibbonTabs();
 
   typedef std::vector<RibbonPanel> RibbonPanelList;
-  typedef std::map<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
-  typedef std::map<eRibbonPanel, CStringP> RibbonPanelMapOfEnumString;
-  typedef std::map<eRibbonPanel, resid_t> RibbonPanelMapOfEnumResource;
+  typedef std::unordered_map<eRibbonTabIndex, RibbonPanelList> RibbonTabList;
+  typedef std::unordered_map<eRibbonPanel, String> RibbonPanelMapOfEnumString;
+  typedef std::unordered_map<eRibbonPanel, resid_t> RibbonPanelMapOfEnumResource;
 
   /**
    * Initializes the ribbon states.
@@ -83,11 +144,6 @@ public:
    * @return true if succeed otherwise false.
    */
   bool Load();
-
-  /**
-   * Reloads ribbon states.
-   */
-  void Reload();
 
   /**
    * Stores ribbon states.
@@ -112,7 +168,7 @@ public:
    * @param[in] tab The tab index.
    * @return The tab name.
    */
-  CStringP GetTabName(eRibbonTabIndex tab) const;
+  String GetTabName(eRibbonTabIndex tab) const;
 
   /**
    * Gets a panel in tab.
@@ -137,28 +193,6 @@ public:
    * @param[in] visible The visible state.
    */
   void SetVisible(eRibbonTabIndex tab, eRibbonPanel panel, bool visible);
-
-  /*
-  / **
-   * Sets a configuration to default section of Ribbon States.
-   * @param[in] pConfig The configuration.
-   * @return true if succeed otherwise false.
-   * /
-  bool SetConfig(CSetting* pConfig);
-
-  / **
-   * Gets a configuration from default section of Ribbon States.
-   * @param[in] name The configuration name.
-   * @return The configuration.
-   * /
-  CSetting* GetConfig(const CStringP& name);
-
-  / **
-   * Gets the ProSIM settings.
-   * @return The ProSIM settings.
-   * /
-  CSetting* GetpProSIMSettings();
-  */
 
   /**
    * Check if panel is available or not. 
@@ -215,42 +249,7 @@ private:
    * @param[in] nameID The panel name.
    * @param[in] visible The visible state.
    */
-  void AddPanel(RibbonPanelList& panels, eRibbonPanel panel, CStringP name, bool visible = true);
-
-  /**
-   * Converts the tab enumeration to string.
-   * @param[in] tab The tab index.
-   * @param[in] prefix The prefix.
-   * @return The tab enumeration in string with the prefix.
-   */
-  CStringP TabEnumToString(eRibbonTabIndex tab, const CStringP& prefix = TabPrefix);
-
-  /**
-   * Converts the panel enumeration to string.
-   * @param[in] panel The panel index.
-   * @param[in] prefix The prefix.
-   * @return The panel enumeration in string with the prefix.
-   */
-  CStringP PanelEnumToString(eRibbonPanel panel, const CStringP& prefix = PanelPrefix);
-
-  /**
-   * Converts the panel string to enumeration.
-   * @param[in] name The panel name.
-   * @return The panel enumeration.
-   */
-  eRibbonPanel PanelStringToEnum(const CStringP& name);
-
-  /**
-   * Gets resource string by panel enumeration.
-   * @param[in] panel The panel index.
-   * @return The resource string.
-   */
-  CStringP PanelGetResourceString(eRibbonPanel panel);
-
-  /**
-   * Updates the ProSIM settings.
-   */
-  void UpdateProSIMSettings();
+  void AddPanel(RibbonPanelList& panels, eRibbonPanel panel, String name, bool visible = true);
 };
 
 }; // namespace RibbonStates

@@ -3,7 +3,7 @@
 
 #include <algorithm>
 
-const CStringP& SelectedTab = L"SelectedTab";
+const String& SelectedTab = L"SelectedTab";
 
 IMPLEMENT_DYNAMIC(CRibbonStateDlg, CBCGPDialogP)
 
@@ -86,7 +86,6 @@ void CRibbonStateDlg::FillPanelListWithCurrentSelectedTab(bool updateButtons)
     auto& panels = *pRibbonPanelList;
     for (auto& e : panels)
     {
-      // for specific cases
       if (!CRibbonTabs::GetpInstance()->IsPanelAvailable(e.m_Panel))
       {
         continue;
@@ -149,7 +148,6 @@ void CRibbonStateDlg::UpdateButtons()
 void CRibbonStateDlg::OnOK()
 {
   CRibbonTabs::GetpInstance()->SetTabList(m_Data);
-  CRibbonTabs::GetpInstance()->Store();
 
   __super::OnOK();
 }
@@ -157,7 +155,6 @@ void CRibbonStateDlg::OnOK()
 void CRibbonStateDlg::OnCancel()
 {
   CRibbonTabs::GetpInstance()->SetTabList(m_BackupData);
-  CRibbonTabs::GetpInstance()->Store();
 
   __super::OnCancel();
 }

@@ -306,7 +306,6 @@
     <ClInclude Include="ClipboardPane.h" />
     <ClInclude Include="CntrItem.h" />
     <ClInclude Include="Codes\BCGPCircleButton.h" />
-    <ClInclude Include="Codes\PantherRibbonBar.h" />
     <ClInclude Include="Codes\RibbonStateDlg.h" />
     <ClInclude Include="Codes\RibbonStates.h" />
     <ClInclude Include="Codes\SingletonT.h" />
