@@ -27,7 +27,7 @@ public:
   SingletonT& operator=(SingletonT const&) = delete;
   #endif // C++14 (MSVC 2013+ or MinGW 4.6+)
 
-  static T& instance()
+  static T& Instance()
   {
     if (m_ptr_instance == nullptr)
     {
@@ -35,11 +35,6 @@ public:
     }
 
     return *m_ptr_instance;
-  }
-
-  static T* GetpInstance()
-  {
-    return &instance();
   }
 
 protected:

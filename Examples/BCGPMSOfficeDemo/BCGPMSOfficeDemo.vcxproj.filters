@@ -99,10 +99,10 @@
     <ClCompile Include="Codes\BCGPCircleButton.cpp">
       <Filter>Codes</Filter>
     </ClCompile>
-    <ClCompile Include="Codes\RibbonStateDlg.cpp">
+    <ClCompile Include="Codes\RibbonOptionsDlg.cpp">
       <Filter>Codes</Filter>
     </ClCompile>
-    <ClCompile Include="Codes\RibbonStates.cpp">
+    <ClCompile Include="Codes\RibbonOptions.cpp">
       <Filter>Codes</Filter>
     </ClCompile>
   </ItemGroup>
@@ -196,10 +196,10 @@
     <ClInclude Include="Codes\BCGPCircleButton.h">
       <Filter>Codes</Filter>
     </ClInclude>
-    <ClInclude Include="Codes\RibbonStateDlg.h">
+    <ClInclude Include="Codes\RibbonOptionsDlg.h">
       <Filter>Codes</Filter>
     </ClInclude>
-    <ClInclude Include="Codes\RibbonStates.h">
+    <ClInclude Include="Codes\RibbonOptions.h">
       <Filter>Codes</Filter>
     </ClInclude>
     <ClInclude Include="Codes\SingletonT.h">
