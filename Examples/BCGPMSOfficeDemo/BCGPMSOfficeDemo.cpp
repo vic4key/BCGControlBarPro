@@ -236,9 +236,12 @@ void CBCGPMSOfficeDemoApp::OnAppAbout()
   {
     if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Patient Tab"))
     {
-      pTab->AddPanel(L"Patient - Patient", false, 1);
-      pTab->AddPanel(L"Patient - Patient Model", true, 2);
-      pTab->AddPanel(L"Patient - Image Series", false, 3);
+      pTab->AddPanel(L"Patient - 0", true, 1);
+      pTab->AddPanel(L"Patient - 1", true, 2);
+      pTab->AddPanel(L"Patient - 2", true, 3);
+      pTab->AddPanel(L"Patient - 3", true, 1);
+      pTab->AddPanel(L"Patient - 4", true, 2);
+      pTab->AddPanel(L"Patient - 5", true, 3);
     }
     if (auto pTab = RibbonTabs::GetpInstance()->AddTab(L"Image Tab"))
     {
