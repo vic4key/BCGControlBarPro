@@ -74,12 +74,14 @@ void RibbonStateDlg::FillTabList(RibbonTabList& tabs)
   UpdateData(FALSE);
 }
 
-void RibbonStateDlg::FillPanelListWithCurrentSelectedTab()
+void RibbonStateDlg::FillPanelListWithCurrentSelectedTab(const bool toUpdateButtons)
 {
   UpdateData(TRUE);
 
   m_AvailablePanels.ResetContent();
   m_SelectedPanels.ResetContent();
+
+  m_ListPairSelectedPanels.clear();
 
   int theTabIndex = m_RibbonTabs.GetCurSel();
   theTabIndex = (theTabIndex == CB_ERR ? 0 : theTabIndex);
@@ -93,6 +95,11 @@ void RibbonStateDlg::FillPanelListWithCurrentSelectedTab()
     for (auto iter = pRibbonPanelList->begin(); iter != pRibbonPanelList->end(); iter++)
     {
       auto& panel = *iter;
+      if (panel.m_Visible)
+      {
+        m_ListPairSelectedPanels.push_back({ &panel, iter });
+      }
+
       auto& thePanelBox = panel.m_Visible ? m_SelectedPanels : m_AvailablePanels;
       int thePanelIndex = thePanelBox.AddString(panel.m_Name.c_str());
       thePanelBox.SetItemImage(thePanelIndex, panel.m_Image);
@@ -112,7 +119,10 @@ void RibbonStateDlg::FillPanelListWithCurrentSelectedTab()
 
   UpdateData(FALSE);
 
-  UpdateButtons();
+  if (toUpdateButtons)
+  {
+    UpdateButtons();
+  }
 }
 
 void RibbonStateDlg::UpdateButtons()
@@ -230,10 +240,73 @@ void RibbonStateDlg::OnReset()
 
 void RibbonStateDlg::OnUp()
 {
+  UpdateData(TRUE);
+
+  int idx = CB_ERR;
+  RibbonPanelPtrIterList::iterator it;
+  if (!GetCurrentSelectedPanel(idx, it))
+  {
+    return;
+  }
+
+  auto it_above = it--;
+
+  std::iter_swap(it->second, it_above->second);
+
+  FillPanelListWithCurrentSelectedTab(false);
+
+  m_SelectedPanels.SetCurSel(idx - 1);
+
+  UpdateButtons();
 }
 
 void RibbonStateDlg::OnDown()
 {
+  UpdateData(TRUE);
+
+  int idx = CB_ERR;
+  RibbonPanelPtrIterList::iterator it;
+  if (!GetCurrentSelectedPanel(idx, it))
+  {
+    return;
+  }
+
+  auto it_above = it++;
+
+  std::iter_swap(it->second, it_above->second);
+
+  FillPanelListWithCurrentSelectedTab(false);
+
+  m_SelectedPanels.SetCurSel(idx + 1);
+
+  UpdateButtons();
+}
+
+bool RibbonStateDlg::GetCurrentSelectedPanel(int& idx, RibbonPanelPtrIterList::iterator& it)
+{
+  idx = m_SelectedPanels.GetCurSel();
+  if (idx == CB_ERR)
+  {
+    return false;
+  }
+
+  auto pRibbonPanel = reinterpret_cast<RibbonPanel*>(m_SelectedPanels.GetItemData(idx));
+  if (pRibbonPanel == nullptr)
+  {
+    return false;
+  }
+
+  it = std::find_if(m_ListPairSelectedPanels.begin(), m_ListPairSelectedPanels.end(), [&](RibbonPanelPtrIterPair& e) -> bool
+  {
+    return e.first == pRibbonPanel;
+  });
+
+  if (it == m_ListPairSelectedPanels.end())
+  {
+    return false;
+  }
+
+  return true;
 }
 
 void RibbonStateDlg::OnLbnSelchangeSelectedPanels()

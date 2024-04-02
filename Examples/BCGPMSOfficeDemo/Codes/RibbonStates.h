@@ -8,6 +8,7 @@
 #include <unordered_map>
 
 #define String std::wstring
+#define Pair std::pair
 #define List std::vector
 #define Dict std::unordered_map
 #define Ptr  std::unique_ptr

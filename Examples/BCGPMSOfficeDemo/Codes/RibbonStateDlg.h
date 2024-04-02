@@ -17,17 +17,23 @@ public:
   enum { IDD = IDD_OPTIONS };
 
 private:
+  RibbonTabList m_Data;
+  RibbonTabList m_BackupData;
+
   CBCGPComboBox m_RibbonTabs;
   CBCGPListBox  m_AvailablePanels;
   CBCGPListBox  m_SelectedPanels;
   UINT m_PanelImageList16x16;
 
-  RibbonTabList m_Data;
-  RibbonTabList m_BackupData;
-
   void FillTabList(RibbonTabList& tabs);
-  void FillPanelListWithCurrentSelectedTab();
+  void FillPanelListWithCurrentSelectedTab(const bool toUpdateButtons = true);
   void UpdateButtons();
+
+  using RibbonPanelPtrIterPair = Pair<RibbonPanel*, RibbonPanelList::iterator>;
+  using RibbonPanelPtrIterList = List<RibbonPanelPtrIterPair>;
+  RibbonPanelPtrIterList m_ListPairSelectedPanels;
+
+  bool GetCurrentSelectedPanel(int& idx, RibbonPanelPtrIterList::iterator& it);
 
 protected:
   virtual BOOL OnInitDialog();
