@@ -90,13 +90,13 @@ void RibbonStateDlg::FillPanelListWithCurrentSelectedTab()
 
   if (pRibbonPanelList != nullptr)
   {
-    auto& panels = *pRibbonPanelList;
-    for (auto& e : panels)
+    for (auto iter = pRibbonPanelList->begin(); iter != pRibbonPanelList->end(); iter++)
     {
-      auto& thePanelBox = e.m_Visible ? m_SelectedPanels : m_AvailablePanels;
-      int thePanelIndex = thePanelBox.AddString(e.m_Name.c_str());
-      thePanelBox.SetItemImage(thePanelIndex, e.m_Image);
-      thePanelBox.SetItemData(thePanelIndex, reinterpret_cast<DWORD_PTR>(&e));
+      auto& panel = *iter;
+      auto& thePanelBox = panel.m_Visible ? m_SelectedPanels : m_AvailablePanels;
+      int thePanelIndex = thePanelBox.AddString(panel.m_Name.c_str());
+      thePanelBox.SetItemImage(thePanelIndex, panel.m_Image);
+      thePanelBox.SetItemData(thePanelIndex, reinterpret_cast<DWORD_PTR>(&panel));
     }
   }
 
