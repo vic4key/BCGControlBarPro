@@ -1,1 +1,1 @@
-2. BCGP Options Dialog (Quick Access Toolbar) @ Customs\Options-Dialog-Demo
+2. BCGP Options Dialog (Quick Access Toolbar) @ Jobs\Options-Dialog-Demo
