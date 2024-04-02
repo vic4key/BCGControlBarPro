@@ -125,6 +125,7 @@
 #define IDB_BTN1_32                     273
 #define IDB_BTN1_HOT_32                 275
 #define IDB_BTN1_PRESSED_32             276
+#define IDD_OPTIONS                     277
 #define IDC_SHOW_FLOATY                 1005
 #define IDC_COLOR_SCHEME                1007
 #define IDC_SCREENTIP_STYLE             1008
@@ -240,6 +241,14 @@
 #define IDC_BUTTON_IMAGE_RIGHT          1128
 #define IDC_BUTTON_IMAGE_TOP            1129
 #define IDC_SAMPLE_CIRCLE_BUTTON        1130
+#define IDC_AVAILABLE_PANELS            1131
+#define IDC_TABS                        1132
+#define IDC_SELECTED_PANELS             1133
+#define IDC_ADD                         1134
+#define IDC_REMOVE                      1136
+#define IDC_UP                          1137
+#define IDC_DOWN                        1138
+#define IDC_RESET                       1139
 #define IDC_MAIL                        17010
 #define IDC_URL                         17011
 #define IDC_YEAR                        17070
@@ -687,9 +696,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        277
+#define _APS_NEXT_RESOURCE_VALUE        279
 #define _APS_NEXT_COMMAND_VALUE         33547
-#define _APS_NEXT_CONTROL_VALUE         1131
+#define _APS_NEXT_CONTROL_VALUE         1140
 #define _APS_NEXT_SYMED_VALUE           1101
 #endif
 #endif

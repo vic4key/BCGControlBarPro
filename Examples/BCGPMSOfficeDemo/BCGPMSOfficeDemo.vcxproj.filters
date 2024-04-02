@@ -99,6 +99,12 @@
     <ClCompile Include="Codes\BCGPCircleButton.cpp">
       <Filter>Codes</Filter>
     </ClCompile>
+    <ClCompile Include="Codes\RibbonOptionsDlg.cpp">
+      <Filter>Codes</Filter>
+    </ClCompile>
+    <ClCompile Include="Codes\RibbonOptions.cpp">
+      <Filter>Codes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="BCGPMSOfficeDemo.rc">
@@ -188,6 +194,15 @@
       <Filter>Codes</Filter>
     </ClInclude>
     <ClInclude Include="Codes\BCGPCircleButton.h">
+      <Filter>Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes\RibbonOptionsDlg.h">
+      <Filter>Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes\RibbonOptions.h">
+      <Filter>Codes</Filter>
+    </ClInclude>
+    <ClInclude Include="Codes\SingletonT.h">
       <Filter>Codes</Filter>
     </ClInclude>
   </ItemGroup>
