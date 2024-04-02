@@ -75,6 +75,12 @@ struct RibbonTab
 
   RibbonTab(RibbonPanelList& panels) : m_Panels(panels) {}
 
+  /**
+   * Adds a panel to the tab.
+   * @param[in] tab The panel name.
+   * @param[in] tab The panel is visible or not.
+   * @param[in] tab The image icon of the panel.
+   */
   void AddPanel(const String& name, const bool visible = true, const int image = -1)
   {
     m_Panels.push_back(RibbonPanel(name, visible, image));
