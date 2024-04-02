@@ -1,0 +1,1170 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\BCGPMSOfficeDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#include ""afxolecl.rc""       // OLE container resources\r\n"
+    "#include ""res\\BCGSoft_ribbon\\BCGPMSOfficeDemo.ribbon.rc2""  // BCG Designer resources\r\n"
+    "#endif\r\n"
+    "#if defined (_BCGCBPRO_STATIC_)\r\n"
+    "#include ""BCGCBPro.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2007Luna.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2007Obsidian.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2007Silver.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2007Aqua.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyleScenic.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2010White.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2010Blue.rc""\r\n"
+    "#include ""..\\..\\BCGCBPro\\Styles\\BCGPStyle2010Black.rc""\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\BCGPMSOfficeDemo.ico"
+
+IDR_BCGPMSTYPE          ICON                    "res\\BCGPMSOfficeDemoDoc.ico"
+
+IDI_SPELL               ICON                    "res\\spell.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "Paste &Special...",           ID_EDIT_PASTE_SPECIAL
+        MENUITEM "Select A&ll\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "F&ind Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "R&eplace\tCtrl+H",            ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "Insert &New Object...",       ID_OLE_INSERT_NEW
+        MENUITEM "Lin&ks...",                   ID_OLE_EDIT_LINKS
+        MENUITEM "Object P&roperties\tAlt+Enter", ID_OLE_EDIT_PROPERTIES
+        MENUITEM "<<OLE VERBS GO HERE>>",       ID_OLE_VERB_FIRST
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_2007_1
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_2007_2
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_2007_3
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_2007_4
+            END
+            POPUP "Office 2&010"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_2010_1
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_2010_2
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_2010_3
+            END
+            MENUITEM "W&indows 7",                  ID_VIEW_APPLOOK_WIN7
+        END
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About BCGPMSOfficeDemo...",  ID_APP_ABOUT
+    END
+END
+
+IDR_CNTR_INPLACE MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    MENUITEM SEPARATOR
+    MENUITEM SEPARATOR
+END
+
+IDR_CONTEXT_MENU MENU
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "Cu&t",                        ID_EDIT_CUT
+        MENUITEM "&Copy",                       ID_EDIT_COPY
+        MENUITEM "&Paste",                      ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Font...",                    ID_WRITE_FONT
+        MENUITEM "P&aragraph...",               ID_WRITE_PARAGRAPH
+        MENUITEM "&Bullets",                    ID_PARA_BULLETS
+        MENUITEM "&Numbering",                  ID_PARA_NUMBERING
+        MENUITEM SEPARATOR
+        MENUITEM "&Hyperlink",                  ID_INSERT_HYPERLINK
+    END
+END
+
+IDR_INSERT_TABLE_MENU MENU
+BEGIN
+    MENUITEM "&Insert Table...",            ID_TABLE_TABLE
+    MENUITEM "&Draw Table",                 ID_TABLE_DRAWTABLE
+    MENUITEM "&Convert to Table",           ID_TABLE_CONVERTTOTABLE
+    MENUITEM "&Excel Spreadsheet",          ID_TABLE_EXCELSPREADSHEET
+    MENUITEM "&Quick Tables",               ID_TABLE_QUICKTABLES
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY, ALT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_CNTR_INPLACE ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+    VK_ESCAPE,      ID_CANCEL_EDIT_CNTR,    VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "BCGPMSOfficeDemo BCGControlBar Sample Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "BCGPMSOfficeDemo"
+            VALUE "LegalCopyright", "Copyright (C) BCGSoft Co Ltd. 1998-2017. All rights reserved"
+            VALUE "OriginalFilename", "BCGPMSOfficeDemo.EXE"
+            VALUE "ProductName", "BCGPMSOfficeDemo Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CLIPBOARD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 131
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 95
+    END
+
+    IDD_FORM_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 321
+        VERTGUIDE, 75
+        VERTGUIDE, 146
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_FORM_NEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 284
+        VERTGUIDE, 137
+        VERTGUIDE, 146
+        VERTGUIDE, 155
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 267
+    END
+
+    IDD_FORM_SHARE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 396
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 313
+    END
+
+    IDD_GENERAL_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 266
+        VERTGUIDE, 29
+        VERTGUIDE, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 212
+    END
+
+    IDD_RES_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 286
+        VERTGUIDE, 36
+        VERTGUIDE, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 199
+    END
+
+    IDD_SHARE_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        VERTGUIDE, 78
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 325
+    END
+
+    IDD_SHARE_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 151
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 93
+    END
+
+    IDD_SHARE_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_SHARE_PAGE4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 178
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+
+    IDD_SHARE_PAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 111
+    END
+
+    IDD_SHARE_PAGE6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 169
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 126
+    END
+
+    IDD_FORM_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 363
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 231
+        HORZGUIDE, 214
+    END
+
+    IDD_TEST_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 336
+        VERTGUIDE, 118
+        VERTGUIDE, 206
+        VERTGUIDE, 223
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 205
+        HORZGUIDE, 88
+        HORZGUIDE, 100
+        HORZGUIDE, 181
+    END
+
+    IDD_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 400
+        VERTGUIDE, 157
+        VERTGUIDE, 162
+        VERTGUIDE, 211
+        VERTGUIDE, 216
+        VERTGUIDE, 372
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 266
+        HORZGUIDE, 7
+        HORZGUIDE, 19
+        HORZGUIDE, 31
+        HORZGUIDE, 37
+        HORZGUIDE, 103
+        HORZGUIDE, 134
+        HORZGUIDE, 225
+        HORZGUIDE, 252
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CLIPBOARD DIALOG 0, 0, 138, 102
+STYLE DS_SETFONT | WS_CHILD | WS_VISIBLE | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Paste All",IDC_PASTE_ALL,7,7,50,14
+    PUSHBUTTON      "Clear All",IDC_CLEAR_ALL,67,7,50,14
+    LTEXT           "Click an item to paste:",IDC_LABEL,7,29,124,8
+    LISTBOX         IDC_ITEMS,7,42,124,23,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Show Clipboard Automatically",IDC_OPTION1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,71,124,10
+    CONTROL         "Collect without Showing Clipboard",IDC_OPTION2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,85,124,10
+END
+
+IDD_FORM_INFO DIALOG 0, 0, 328, 274
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Permissions",IDC_LABEL1,75,47,71,8
+    CONTROL         "",IDC_SEPARATOR_4,"Static",SS_ETCHEDVERT,155,7,1,245
+    CONTROL         "",IDC_INFO_LABEL,"Static",SS_GRAYRECT | NOT WS_VISIBLE,7,7,139,28
+    LTEXT           "Anyone can open, copy and change any part of this document",IDC_TEXT1,75,60,71,36
+    LTEXT           "Prepare for Sharing",IDC_LABEL2,75,124,71,8
+    LTEXT           "Before sharing this file, be aware that it contains:\nDocument properties and  author's name",IDC_TEXT2,75,137,71,45
+    LTEXT           "Versions",IDC_LABEL3,75,202,71,8
+    LTEXT           "You can open or delete a version file. Most autosaved versions are deleted when you close this file.",IDC_TEXT3,75,215,71,52
+    CONTROL         "",IDC_SEPARATOR_1,"Static",SS_ETCHEDHORZ,7,36,139,1
+    CONTROL         "",IDC_SEPARATOR_2,"Static",SS_ETCHEDHORZ,7,110,139,1
+    CONTROL         "",IDC_SEPARATOR_3,"Static",SS_ETCHEDHORZ,7,186,139,1
+    PUSHBUTTON      "Protect Document",IDC_PROTECT_DOCUMENT,7,47,56,49,BS_MULTILINE
+    PUSHBUTTON      "Check for Issues",IDC_CHECK_FOR_ISSUE,7,124,56,49,BS_MULTILINE
+    PUSHBUTTON      "Manage Versions",IDC_MANAGE_VERSIONS,7,202,56,49,BS_MULTILINE
+    PUSHBUTTON      "Preview",IDC_PREVIEW,165,7,156,125
+END
+
+IDD_FORM_NEW DIALOG 0, 0, 291, 274
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SEPARATOR_2,"Static",SS_ETCHEDVERT,146,7,1,244
+    CONTROL         "",IDC_PREVIEW,"Static",SS_GRAYRECT | NOT WS_VISIBLE,155,7,129,177
+    LTEXT           "Available Templates",IDC_INFO_LABEL,7,7,127,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_SEPARATOR_1,"Static",SS_ETCHEDHORZ,7,24,130,1
+    PUSHBUTTON      "Create",IDC_CREATE,155,192,56,49
+    CONTROL         "",IDC_GALLERY_LOCATION,"Static",SS_GRAYRECT | NOT WS_VISIBLE,7,31,130,219
+END
+
+IDD_FORM_SHARE DIALOG 0, 0, 403, 320
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_PROPSHEET_LOCATION,"Static",SS_GRAYRECT | NOT WS_VISIBLE,7,7,360,282
+END
+
+IDD_GENERAL_PAGE DIALOG 0, 0, 273, 219
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Top options for Working with Demo",IDC_BANER,7,0,259,13
+    CONTROL         "Show &Mini Toolbar on selection",IDC_SHOW_FLOATY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,31,110,10
+    CONTROL         "Show &KeyTips",IDC_SHOW_KEY_TIPS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,29,51,61,10
+    LTEXT           "&Color scheme:",IDC_STATIC,29,77,46,8
+    COMBOBOX        IDC_COLOR_SCHEME,85,76,103,203,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Color",IDC_CUSTOM_COLOR,192,75,74,14
+    LTEXT           "&Application (Main) Button Color (Office 2010 only):",IDC_STATIC,29,104,157,8
+    PUSHBUTTON      "Color",IDC_APP_BUTTON_COLOR,192,101,74,14
+    LTEXT           "Acc&ent Color (Office 2013/2016 only):",IDC_STATIC,29,128,144,8
+    COMBOBOX        IDC_ACCENT_COLOR,192,127,74,126,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Background Image (Office 2013/2016 only):",IDC_STATIC,29,150,146,8
+    COMBOBOX        IDC_BACKGROUND_IMAGE,192,149,74,126,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sc&reentip style:",IDC_STATIC,29,176,49,8
+    COMBOBOX        IDC_SCREENTIP_STYLE,92,175,174,203,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Backstage Page Transition &Effect:",IDC_PAGE_TRANSITION_EFFECT_LABEL,29,201,109,8
+    COMBOBOX        IDC_PAGE_TRANSITION_EFFECT_LIST,148,200,118,190,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_RES_PAGE DIALOG 0, 0, 293, 206
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Resources"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Visit BCGSoft Home Page",IDC_STATIC,36,34,82,8
+    PUSHBUTTON      "&Home Page",IDC_HOME,170,32,50,14
+    LTEXT           "Contact us",IDC_STATIC,36,62,35,8
+    PUSHBUTTON      "&Contact",IDC_CONTACT,170,60,50,14
+    LTEXT           "Product Home Page",IDC_STATIC,36,90,65,8
+    PUSHBUTTON      "&Product",IDC_PRODUCT,170,88,50,14
+    LTEXT           "Technical Support",IDC_STATIC,36,118,59,8
+    PUSHBUTTON      "&Support",IDC_SUPPORT,170,116,50,14
+END
+
+IDD_SHARE_PAGE1 DIALOG 0, 0, 168, 332
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Send Using E-mail"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Send as Attachment",IDC_PROP_BUTTON1,7,7,56,49,BS_MULTILINE
+    PUSHBUTTON      "Send a Link",IDC_PROP_BUTTON2,7,74,56,49,BS_MULTILINE | WS_DISABLED
+    PUSHBUTTON      "Send as PDF",IDC_PROP_BUTTON3,7,141,56,49,BS_MULTILINE
+    PUSHBUTTON      "Send as XPS",IDC_PROP_BUTTON4,7,208,56,49,BS_MULTILINE
+    PUSHBUTTON      "Send as Internet Fax",IDC_PROP_BUTTON5,7,275,56,49,BS_MULTILINE
+    LTEXT           "Attach a copy of this document to an e-mail",IDC_LABEL1_PROP1,78,7,59,25
+    LTEXT           "Attach a XPS copy of this document to an e-mail",IDC_LABEL2_PROP4,78,209,59,32
+    LTEXT           "Create an e-mail that contains a link to this document",IDC_LABEL2_PROP2,78,76,59,23
+    LTEXT           "Attach a PDF copy of this document to an e-mail",IDC_LABEL2_PROP3,78,142,59,33
+    LTEXT           "Send as Internet Fax",IDC_LABEL2_PROP5,78,277,59,18
+END
+
+IDD_SHARE_PAGE2 DIALOG 0, 0, 158, 100
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Save to OneDrive"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Save to the Web to make this document available from any computer or to share it with other people.",IDC_LABEL2_PROP6,7,7,144,28
+    PUSHBUTTON      "Sign In",IDC_PROP2_BUTTON1,7,43,56,49,BS_MULTILINE
+END
+
+IDD_SHARE_PAGE3 DIALOG 0, 0, 203, 136
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Save to SharePoint"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Save to a SharePoint site to collaborate with other people on this document.",IDC_LABEL2_PROP7,7,7,189,17
+    CONTROL         "",IDC_SHARE3_LOCATION,"Static",SS_GRAYRECT | NOT WS_VISIBLE,7,30,189,46
+    PUSHBUTTON      "Save &As",IDC_SAVE_AS,7,86,59,41
+END
+
+IDD_SHARE_PAGE4 DIALOG 0, 0, 185, 236
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Publish as Blog Post"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Publish as Blog Post",IDC_PROP4_BUTTON1,7,178,56,49,BS_MULTILINE
+    LTEXT           "Create a new blog post using the current document. Blogging is a way to publish content to the Web or within an organization.",IDC_LABEL1_PROP8,7,7,171,28
+    LTEXT           "SharePoint Blog",IDC_TEXT1_PROP22,25,55,52,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,57,5,5
+    LTEXT           "WordPress",IDC_TEXT2_PROP23,25,68,36,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,70,5,5
+    LTEXT           "Blogger",IDC_TEXT3_PROP24,25,81,25,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,83,5,5
+    LTEXT           "Windows Live Space",IDC_TEXT4_PROP25,25,94,68,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,96,5,5
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,109,5,5
+    LTEXT           "Community Server",IDC_TEXT5_PROP26,25,107,58,8
+    LTEXT           "You will be promted to register your blog account if this is the first time you have a published a blog post from Word. You may add additional blog accounts or change existing blog accounts at any time.",IDC_LABEL2_PROP10,7,137,164,34
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,122,5,5
+    LTEXT           "TypePad",IDC_TEXT1_PROP27,25,120,30,8
+    LTEXT           "Some supported blogging sites include:",IDC_LABEL5_PROP9,7,42,124,8
+END
+
+IDD_SHARE_PAGE5 DIALOG 0, 0, 151, 119
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Change File Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_SHARE5_LOCATION,"Static",SS_GRAYRECT | NOT WS_VISIBLE,7,7,137,103
+END
+
+IDD_SHARE_PAGE6 DIALOG 0, 0, 176, 133
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CLIPSIBLINGS | WS_CLIPCHILDREN | WS_CAPTION
+CAPTION "Create PDF/XPS Document"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Create a PDF/XPS",IDC_PROP6_BUTTON1,7,76,56,49,BS_MULTILINE
+    LTEXT           "Save this document in a fixed format.",IDC_LABEL1_PROP11,7,7,117,8
+    LTEXT           "Document looks the same on most computers",IDC_TEXT1_PROP28,25,20,144,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,22,5,5
+    LTEXT           "Preserves fonts, formatting, and images",IDC_TEXT2_PROP29,25,33,124,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,36,5,5
+    LTEXT           "Content cannot be easily changed",IDC_TEXT3_PROP30,25,46,109,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,48,5,5
+    LTEXT           "Free viewers are available on the Web",IDC_TEXT4_PROP31,25,60,122,8
+    CONTROL         "",IDC_STATIC,"Static",SS_GRAYRECT,7,61,5,5
+END
+
+IDD_FORM_HELP DIALOG 0, 0, 370, 238
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_HELP_LIST,7,7,139,206,LBS_OWNERDRAWVARIABLE | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_SEPARATOR_4,"Static",SS_ETCHEDVERT,155,7,1,207
+    CONTROL         "",IDC_LOGO_PLACE_HOLDER,"Static",SS_GRAYRECT | NOT WS_VISIBLE,165,8,198,43
+    LTEXT           "BCGControlBar Pro for MFC version",IDC_LABEL_1,165,94,112,8,SS_NOPREFIX
+    LTEXT           "00.00",IDC_VERSION,285,94,22,8
+    LTEXT           "Copyright ©",IDC_LABEL_2,165,111,38,8
+    LTEXT           "0000-0000",IDC_YEAR,207,111,38,8
+    LTEXT           "Web site:",IDC_LABEL_4,165,131,31,8
+    CONTROL         "http://www.bcgsoft.com",IDC_URL,"Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,199,129,92,14
+    LTEXT           "E-mail:",IDC_LABEL_5,165,147,22,8
+    CONTROL         "info@bcgsoft.com",IDC_MAIL,"Button",BS_OWNERDRAW | BS_LEFT | WS_TABSTOP,199,145,70,14
+    CONTROL         "",IDC_CAPTION_HOLDER,"Static",SS_GRAYRECT | NOT WS_VISIBLE,165,59,198,19
+    LTEXT           "BCGSoft Co Ltd. All rights reserved",IDC_LABEL_3,249,111,114,8
+    CONTROL         "",IDC_SEPARATOR_1,"Static",SS_ETCHEDHORZ,165,80,197,1
+END
+
+IDD_TEST_DIALOG DIALOGEX 0, 0, 343, 212
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,223,191,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,286,191,50,14
+    PUSHBUTTON      "Circle Button 1",IDC_CIRCLE_BUTTON,6,7,88,81
+    PUSHBUTTON      "Push Button 1",IDC_PUSH_BUTTON,118,7,88,81
+    PUSHBUTTON      "Circle Button 2",IDC_CIRCLE_BUTTON_2,6,100,88,81
+    PUSHBUTTON      "Push Button 2",IDC_PUSH_BUTTON_2,118,100,88,81
+    CONTROL         "With Image",IDC_BUTTON_IMAGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,223,28,53,10
+    CONTROL         "Top Aligment",IDC_BUTTON_IMAGE_TOP,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,223,43,57,10
+    CONTROL         "Right Alignment",IDC_BUTTON_IMAGE_RIGHT,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,223,58,66,10
+    PUSHBUTTON      "Sample Circle Button",IDC_SAMPLE_CIRCLE_BUTTON,223,100,88,81
+END
+
+IDD_OPTIONS DIALOGEX 0, 0, 407, 273
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_TABS,7,19,150,30,CBS_DROPDOWNLIST | CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_AVAILABLE_PANELS,7,37,150,188,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add >>",IDC_ADD,162,103,49,14
+    PUSHBUTTON      "<< Remove",IDC_REMOVE,162,120,49,14
+    LISTBOX         IDC_SELECTED_PANELS,216,19,150,188,LBS_OWNERDRAWFIXED | LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Up",IDC_UP,372,103,28,14
+    PUSHBUTTON      "Down",IDC_DOWN,372,120,28,14
+    PUSHBUTTON      "Reset",IDC_RESET,216,211,50,14
+    DEFPUSHBUTTON   "OK",IDOK,295,252,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,350,252,50,14
+    LTEXT           "Choose commands from:",IDC_STATIC,7,7,80,8
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_GENERAL_PAGE DLGINIT
+BEGIN
+    IDC_COLOR_SCHEME, 0x403, 17, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3030, 0x2037, 0x6c42, 0x6575, "\000" 
+    IDC_COLOR_SCHEME, 0x403, 18, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3030, 0x2037, 0x6c42, 0x6361, 0x006b, 
+
+    IDC_COLOR_SCHEME, 0x403, 17, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3030, 0x2037, 0x7141, 0x6175, "\000" 
+    IDC_COLOR_SCHEME, 0x403, 19, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3030, 0x2037, 0x6953, 0x766c, 0x7265, 
+"\000" 
+    IDC_COLOR_SCHEME, 0x403, 19, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3030, 0x2037, 0x7543, 0x7473, 0x6d6f, 
+"\000" 
+    IDC_COLOR_SCHEME, 0x403, 27, 0
+0x6957, 0x646e, 0x776f, 0x2073, 0x2f37, 0x2f38, 0x3031, 0x6c2d, 0x6b69, 
+0x2065, 0x6353, 0x6e65, 0x6369, "\000" 
+    IDC_COLOR_SCHEME, 0x403, 17, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2030, 0x6c42, 0x6575, "\000" 
+    IDC_COLOR_SCHEME, 0x403, 19, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2030, 0x6953, 0x766c, 0x7265, 
+"\000" 
+    IDC_COLOR_SCHEME, 0x403, 18, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2030, 0x6c42, 0x6361, 0x006b, 
+
+    IDC_COLOR_SCHEME, 0x403, 18, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2033, 0x6857, 0x7469, 0x0065, 
+
+    IDC_COLOR_SCHEME, 0x403, 23, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2033, 0x694c, 0x6867, 0x2074, 
+0x7247, 0x7961, "\000" 
+    IDC_COLOR_SCHEME, 0x403, 22, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2033, 0x6144, 0x6b72, 0x4720, 
+0x6172, 0x0079, 
+    IDC_COLOR_SCHEME, 0x403, 21, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2036, 0x6f43, 0x6f6c, 0x6672, 
+0x6c75, "\000" 
+    IDC_COLOR_SCHEME, 0x403, 22, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2036, 0x6144, 0x6b72, 0x4720, 
+0x6172, 0x0079, 
+    IDC_COLOR_SCHEME, 0x403, 18, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2036, 0x6857, 0x7469, 0x0065, 
+
+    IDC_COLOR_SCHEME, 0x403, 18, 0
+0x664f, 0x6966, 0x6563, 0x3220, 0x3130, 0x2036, 0x6c42, 0x6361, 0x006b, 
+
+    IDC_ACCENT_COLOR, 0x403, 8, 0
+0x6544, 0x6166, 0x6c75, 0x0074, 
+    IDC_ACCENT_COLOR, 0x403, 5, 0
+0x6c42, 0x6575, "\000" 
+    IDC_ACCENT_COLOR, 0x403, 6, 0
+0x7242, 0x776f, 0x006e, 
+    IDC_ACCENT_COLOR, 0x403, 6, 0
+0x7247, 0x6565, 0x006e, 
+    IDC_ACCENT_COLOR, 0x403, 5, 0
+0x694c, 0x656d, "\000" 
+    IDC_ACCENT_COLOR, 0x403, 8, 0
+0x614d, 0x6567, 0x746e, 0x0061, 
+    IDC_ACCENT_COLOR, 0x403, 7, 0
+0x724f, 0x6e61, 0x6567, "\000" 
+    IDC_ACCENT_COLOR, 0x403, 5, 0
+0x6950, 0x6b6e, "\000" 
+    IDC_ACCENT_COLOR, 0x403, 7, 0
+0x7550, 0x7072, 0x656c, "\000" 
+    IDC_ACCENT_COLOR, 0x403, 4, 0
+0x6552, 0x0064, 
+    IDC_ACCENT_COLOR, 0x403, 5, 0
+0x6554, 0x6c61, "\000" 
+    IDC_BACKGROUND_IMAGE, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_BACKGROUND_IMAGE, 0x403, 12, 0
+0x6143, 0x6c6c, 0x6769, 0x6172, 0x6870, 0x0079, 
+    IDC_BACKGROUND_IMAGE, 0x403, 19, 0
+0x6943, 0x6372, 0x656c, 0x6120, 0x646e, 0x5320, 0x7274, 0x7069, 0x7365, 
+"\000" 
+    IDC_BACKGROUND_IMAGE, 0x403, 8, 0
+0x6943, 0x6372, 0x6975, 0x0074, 
+    IDC_BACKGROUND_IMAGE, 0x403, 7, 0
+0x6c43, 0x756f, 0x7364, "\000" 
+    IDC_BACKGROUND_IMAGE, 0x403, 7, 0
+0x7453, 0x6172, 0x7377, "\000" 
+    IDC_BACKGROUND_IMAGE, 0x403, 11, 0
+0x7254, 0x6565, 0x5220, 0x6e69, 0x7367, "\000" 
+    IDC_SCREENTIP_STYLE, 0x403, 39, 0
+0x6853, 0x776f, 0x6620, 0x6165, 0x7574, 0x6572, 0x6420, 0x7365, 0x6963, 
+0x7470, 0x6f69, 0x736e, 0x6920, 0x206e, 0x6353, 0x6572, 0x6e65, 0x6974, 
+0x7370, "\000" 
+    IDC_SCREENTIP_STYLE, 0x403, 45, 0
+0x6f44, 0x276e, 0x2074, 0x6873, 0x776f, 0x6620, 0x6165, 0x7574, 0x6572, 
+0x6420, 0x7365, 0x6963, 0x7470, 0x6f69, 0x736e, 0x6920, 0x206e, 0x6353, 
+0x6572, 0x6e65, 0x6974, 0x7370, "\000" 
+    IDC_SCREENTIP_STYLE, 0x403, 22, 0
+0x6f44, 0x276e, 0x2074, 0x6873, 0x776f, 0x5320, 0x7263, 0x6565, 0x746e, 
+0x7069, 0x0073, 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 5, 0
+0x6f4e, 0x656e, "\000" 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 6, 0
+0x6c53, 0x6469, 0x0065, 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 23, 0
+0x6953, 0x706d, 0x656c, 0x5320, 0x696c, 0x6564, 0x2820, 0x2032, 0x6170, 
+0x6567, 0x2973, "\000" 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 4, 0
+0x6f50, 0x0070, 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 5, 0
+0x6146, 0x6564, "\000" 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 15, 0
+0x6556, 0x7472, 0x6369, 0x6c61, 0x5320, 0x696c, 0x6564, "\000" 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 32, 0
+0x6953, 0x706d, 0x656c, 0x5620, 0x7265, 0x6974, 0x6163, 0x206c, 0x6c53, 
+0x6469, 0x2065, 0x3228, 0x7020, 0x6761, 0x7365, 0x0029, 
+    IDC_PAGE_TRANSITION_EFFECT_LIST, 0x403, 7, 0
+0x7041, 0x6570, 0x7261, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CHART               BITMAP                  "res\\chart.bmp"
+
+IDB_PICTURE             BITMAP                  "res\\picture.bmp"
+
+IDB_TABLE               BITMAP                  "res\\table.bmp"
+
+IDB_BTN1_32             BITMAP                  "res\\button32.bmp"
+
+IDB_BTN1_HOT_32         BITMAP                  "res\\button32hot.bmp"
+
+IDB_BTN1_PRESSED_32     BITMAP                  "res\\button32pressed.bmp"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDB_LOGO                PNG                     "res\\logo.png"
+
+IDB_TOOLTIP_CLIPBOARD   PNG                     "res\\tooltip-clipboard.png"
+
+IDB_TOOLTIP_FONTDLG     PNG                     "res\\tooltip-fontdlg.png"
+
+IDB_TOOLTIP_MAIN        PNG                     "res\\tooltip-main.png"
+
+IDB_TOOLTIP_PARAGRAPH   PNG                     "res\\tooltip-paragraph.png"
+
+IDB_SPELL               PNG                     "res\\spell.png"
+
+IDB_CLEAR_ALL           PNG                     "res\\clearall.png"
+
+IDB_PASTE_ALL           PNG                     "res\\pasteall.png"
+
+IDB_LAYOUT              PNG                     "res\\layout.png"
+
+IDB_INFO                PNG                     "res\\info.png"
+
+IDB_BULLETS             PNG                     "res\\bullets.png"
+
+IDB_NUM                 PNG                     "res\\num.png"
+
+IDB_MULTI               PNG                     "res\\multi.png"
+
+IDB_POSITION_1          PNG                     "res\\position1.png"
+
+IDB_POSITION_2          PNG                     "res\\position2.png"
+
+IDB_PASTE               PNG                     "res\\paste.png"
+
+IDB_BS_CHECKISSUES      PNG                     "res\\bs_checkissues.png"
+
+IDB_BS_CREATE           PNG                     "res\\bs_create.png"
+
+IDB_BS_CREATEPDFXPS     PNG                     "res\\bs_createpdfxps.png"
+
+IDB_BS_FILETYPES        PNG                     "res\\bs_filetypes.png"
+
+IDB_BS_GALLERY_NEW      PNG                     "res\\bs_new.png"
+
+IDB_BS_MANAGEVERSIONS   PNG                     "res\\bs_manageversions.png"
+
+IDB_BS_PRINT            PNG                     "res\\bs_print.png"
+
+IDB_BS_PRINTPREVIEW     PNG                     "res\\bs_printpreview.png"
+
+IDB_BS_PROTECT          PNG                     "res\\bs_protect.png"
+
+IDB_BS_PUBLISHBLOG      PNG                     "res\\bs_publishblog.png"
+
+IDB_BS_QUICKPRINT       PNG                     "res\\bs_quickprint.png"
+
+IDB_BS_SENDATTACHMENT   PNG                     "res\\bs_sendattachment.png"
+
+IDB_BS_SENDFAX          PNG                     "res\\bs_sendfax.png"
+
+IDB_BS_SENDLINK         PNG                     "res\\bs_sendlink.png"
+
+IDB_BS_SENDPDF          PNG                     "res\\bs_sendpdf.png"
+
+IDB_BS_SENDXPS          PNG                     "res\\bs_sendxps.png"
+
+IDB_BS_SHARE            PNG                     "res\\bs_share.png"
+
+IDB_BS_SAVE_AS          PNG                     "res\\bs_save_as.png"
+
+IDB_BS_SIGNIN           PNG                     "res\\bs_signin.png"
+
+IDB_BS_WATERMARK        PNG                     "res\\bs_watermark.png"
+
+IDB_HEADERPAT_1         PNG                     "res\\HeaderPat_1.png"
+
+IDB_HEADERPAT_2         PNG                     "res\\HeaderPat_2.png"
+
+IDB_HEADERPAT_3         PNG                     "res\\HeaderPat_3.png"
+
+IDB_HEADERPAT_4         PNG                     "res\\HeaderPat_4.png"
+
+IDB_OPTIONS             PNG                     "res\\options.png"
+
+IDB_THEME_THEMES        PNG                     "res\\ThemeThemes.png"
+
+IDB_THEME_COLORS        PNG                     "res\\ThemeColors.png"
+
+IDB_THEME_EFFECTS       PNG                     "res\\ThemeEffects.png"
+
+IDB_THEME_FONTS         PNG                     "res\\ThemeFonts.png"
+
+IDB_BS_HELP_LIST_16     PNG                     "res\\bs_help_list_16.png"
+
+IDB_BS_HELP_LIST_32     PNG                     "res\\bs_help_list_32.png"
+
+IDB_GRIDARROWS          PNG                     "res\\gridarrows.png"
+
+IDB_LAYOUT_METRO        PNG                     "res\\layoutmetro.png"
+
+IDR_RIBBON_BACKGROUND6  PNG                     "res\\Background6.PNG"
+
+IDR_RIBBON_BACKGROUND1  PNG                     "res\\Background1.png"
+
+IDR_RIBBON_BACKGROUND2  PNG                     "res\\Background2.png"
+
+IDR_RIBBON_BACKGROUND3  PNG                     "res\\Background3.PNG"
+
+IDR_RIBBON_BACKGROUND4  PNG                     "res\\Background4.PNG"
+
+IDR_RIBBON_BACKGROUND5  PNG                     "res\\Background5.PNG"
+
+IDB_CLIPBOARD_ITEM      PNG                     "res\\ClipboardItem.png"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RTF
+//
+
+IDR_START_DOC           RTF                     "res\\start.rtf"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_TEST_DIALOG AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPTIONS AFX_DIALOG_LAYOUT
+BEGIN
+    0,
+    0, 0, 100, 0,
+    0, 0, 100, 100,
+    100, 100, 0, 0,
+    100, 100, 0, 0,
+    100, 0, 0, 100,
+    100, 100, 0, 0,
+    100, 100, 0, 0,
+    100, 100, 0, 0,
+    100, 100, 0, 0,
+    100, 100, 0, 0,
+    0, 0, 0, 0
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_FAILED_TO_CREATE    "Failed to create object.  Make sure the object is entered in the system registry."
+    IDP_OLE_INIT_FAILED     "OLE initialization failed.  Make sure that the OLE libraries are the correct version."
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "BCGPMSOfficeDemo\n\nBCGPMS\n\n\nBCGPMSOfficeDemo.Document\nBCGPMS Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "BCGPMSOfficeDemo"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_DIRECT    "Send the document directly to the default printer without making changes\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_PASTE_LINK      "Insert Clipboard contents and a link to its source\nPaste Link"
+    ID_EDIT_PASTE_SPECIAL   "Insert Clipboard contents with options\nPaste Special"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OLE_INSERT_NEW       "Insert new embedded object\nNew Object"
+    ID_OLE_EDIT_LINKS       "Edit linked objects\nEdit Links"
+    ID_OLE_EDIT_CONVERT     "Convert object to different type\nConvert Object"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OLE_VERB_FIRST       "Activate embedded or linked object"
+    57873                   "Activate embedded or linked object"
+    57874                   "Activate embedded or linked object"
+    57875                   "Activate embedded or linked object"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_APPLOOK_2007_1  "Activate Office 2007 application look\nOffice 2007 Look (Blue)"
+    ID_VIEW_APPLOOK_2007_2  "Activate Office 2007 application look\nOffice 2007 Look (Black)"
+    ID_VIEW_APPLOOK_2007_3  "Activate Office 2007 application look\nOffice 2007 Look (Silver)"
+    ID_VIEW_APPLOOK_2007_4  "Activate Office 2007 application look\nOffice 2007 Look (Aqua)"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_APPLOOK_2010_1  "Activate Office 2010 application look\nOffice 2010 Look (Blue)"
+    ID_VIEW_APPLOOK_2010_2  "Activate Office 2010 application look\nOffice 2010 Look (Black)"
+    ID_VIEW_APPLOOK_2010_3  "Activate Office 2010 application look\nOffice 2010 Look (Silver)"
+    ID_VIEW_APPLOOK_2013_1  "Activate Office 2013 application look\nOffice 2013 Look (White)"
+    ID_VIEW_APPLOOK_2013_2  "Activate Office 2013 application look\nOffice 2013 Look (Light Gray)"
+    ID_VIEW_APPLOOK_2013_3  "Activate Office 2013 application look\nOffice 2013 Look (Dark Gray)"
+END
+
+STRINGTABLE
+BEGIN
+    ID_TOOLS_OPTIONS        "Changes application options\nOptions"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\BCGPMSOfficeDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#include "afxolecl.rc"       // OLE container resources
+#include "res\BCGSoft_ribbon\BCGPMSOfficeDemo.ribbon.rc2"  // BCG Designer resources
+#endif
+#if defined (_BCGCBPRO_STATIC_)
+#include "BCGCBPro.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2007Luna.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2007Obsidian.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2007Silver.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2007Aqua.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyleScenic.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2010White.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2010Blue.rc"
+#include "..\..\BCGCBPro\Styles\BCGPStyle2010Black.rc"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
