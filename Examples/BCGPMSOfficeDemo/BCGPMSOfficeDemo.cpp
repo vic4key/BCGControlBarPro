@@ -227,7 +227,7 @@ int CBCGPMSOfficeDemoApp::ExitInstance()
 // App command to run the dialog
 void CBCGPMSOfficeDemoApp::OnAppAbout()
 {
-  //BCGPShowAboutDlg (AFX_IDS_APP_TITLE);
+	//BCGPShowAboutDlg (AFX_IDS_APP_TITLE);
 
   //TestDialog dialog(m_pMainWnd);
   //dialog.DoModal();
