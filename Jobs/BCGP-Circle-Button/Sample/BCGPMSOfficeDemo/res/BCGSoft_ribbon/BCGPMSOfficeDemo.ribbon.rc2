@@ -1,0 +1,58 @@
+// BCGSoft Designer automatically generated file.
+// Do not edit.
+//
+
+#ifdef APSTUDIO_INVOKED
+	#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// BCGP_RIBBON_XML
+//
+
+IDR_BCGP_RIBBON_XML BCGP_RIBBON_XML "res\\BCGSoft_ribbon\\ribbon.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDR_BCGP_IMAGE_RIBBON_BAR PNG "res\\BCGSoft_ribbon\\ribbon_bar.png"
+IDR_BCGP_IMAGE_MAIN PNG "res\\BCGSoft_ribbon\\main.png"
+IDR_BCGP_IMAGE_CATEGORY_MAIN_SMALL PNG "res\\BCGSoft_ribbon\\category_main_small.png"
+IDR_BCGP_IMAGE_CATEGORY_MAIN_LARGE PNG "res\\BCGSoft_ribbon\\category_main_large.png"
+IDR_BCGP_IMAGE_CATEGORY_BACKSTAGE_SMALL PNG "res\\BCGSoft_ribbon\\category_backstage_small.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_0 PNG "res\\BCGSoft_ribbon\\category_small_0.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_0 PNG "res\\BCGSoft_ribbon\\category_large_0.png"
+IDR_BCGP_IMAGE_PALETTE_0_0 PNG "res\\BCGSoft_ribbon\\palette_0_0.png"
+IDR_BCGP_IMAGE_PALETTE_0_1 PNG "res\\BCGSoft_ribbon\\palette_0_1.png"
+IDR_BCGP_IMAGE_PALETTE_0_2 PNG "res\\BCGSoft_ribbon\\palette_0_2.png"
+IDR_BCGP_IMAGE_PALETTE_0_3 PNG "res\\BCGSoft_ribbon\\palette_0_3.png"
+IDR_BCGP_IMAGE_PALETTE_0_4 PNG "res\\BCGSoft_ribbon\\palette_0_4.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_1 PNG "res\\BCGSoft_ribbon\\category_small_1.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_1 PNG "res\\BCGSoft_ribbon\\category_large_1.png"
+IDR_BCGP_IMAGE_PALETTE_1_1 PNG "res\\BCGSoft_ribbon\\palette_1_1.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_2 PNG "res\\BCGSoft_ribbon\\category_small_2.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_2 PNG "res\\BCGSoft_ribbon\\category_large_2.png"
+IDR_BCGP_IMAGE_PALETTE_2_4 PNG "res\\BCGSoft_ribbon\\palette_2_4.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_3 PNG "res\\BCGSoft_ribbon\\category_small_3.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_3 PNG "res\\BCGSoft_ribbon\\category_large_3.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_4 PNG "res\\BCGSoft_ribbon\\category_small_4.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_4 PNG "res\\BCGSoft_ribbon\\category_large_4.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_5 PNG "res\\BCGSoft_ribbon\\category_small_5.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_5 PNG "res\\BCGSoft_ribbon\\category_large_5.png"
+IDR_BCGP_IMAGE_CATEGORY_SMALL_6 PNG "res\\BCGSoft_ribbon\\category_small_6.png"
+IDR_BCGP_IMAGE_CATEGORY_LARGE_6 PNG "res\\BCGSoft_ribbon\\category_large_6.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_SMALL_0_0 PNG "res\\BCGSoft_ribbon\\category_context_small_0_0.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_LARGE_0_0 PNG "res\\BCGSoft_ribbon\\category_context_large_0_0.png"
+IDR_BCGP_IMAGE_PALETTE_0_0_0 PNG "res\\BCGSoft_ribbon\\palette_0_0_0.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_SMALL_1_0 PNG "res\\BCGSoft_ribbon\\category_context_small_1_0.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_LARGE_1_0 PNG "res\\BCGSoft_ribbon\\category_context_large_1_0.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_SMALL_1_1 PNG "res\\BCGSoft_ribbon\\category_context_small_1_1.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_LARGE_1_1 PNG "res\\BCGSoft_ribbon\\category_context_large_1_1.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_SMALL_1_2 PNG "res\\BCGSoft_ribbon\\category_context_small_1_2.png"
+IDR_BCGP_IMAGE_CATEGORY_CONTEXT_LARGE_1_2 PNG "res\\BCGSoft_ribbon\\category_context_large_1_2.png"
+IDR_BCGP_IMAGE_PALETTE_1_2_0 PNG "res\\BCGSoft_ribbon\\palette_1_2_0.png"
+IDR_BCGP_IMAGE_STATUS_BAR PNG "res\\BCGSoft_ribbon\\status_bar.png"
+IDR_BCGP_IMAGE_STATUS_GROUP_0 PNG "res\\BCGSoft_ribbon\\status_group_0.png"
