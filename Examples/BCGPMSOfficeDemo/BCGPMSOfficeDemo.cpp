@@ -20,8 +20,6 @@
 #include "BCGPMSOfficeDemoDoc.h"
 #include "BCGPMSOfficeDemoView.h"
 #include "RibbonTooltipCtrl.h"
-#include "Codes/TestDialog.h"
-#include "Codes/RibbonOptionsDlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -227,38 +225,7 @@ int CBCGPMSOfficeDemoApp::ExitInstance()
 // App command to run the dialog
 void CBCGPMSOfficeDemoApp::OnAppAbout()
 {
-	//BCGPShowAboutDlg (AFX_IDS_APP_TITLE);
-
-  //TestDialog dialog(m_pMainWnd);
-  //dialog.DoModal();
-
-  if (RibbonTabs::Instance().GetTabList().empty())
-  {
-    if (auto pTab = RibbonTabs::Instance().AddTab(L"Patient Tab"))
-    {
-      pTab->AddPanel(L"Patient - 0", true, 1);
-      pTab->AddPanel(L"Patient - 1", true, 2);
-      pTab->AddPanel(L"Patient - 2", true, 3);
-      pTab->AddPanel(L"Patient - 3", true, 1);
-      pTab->AddPanel(L"Patient - 4", true, 2);
-      pTab->AddPanel(L"Patient - 5", true, 3);
-    }
-    if (auto pTab = RibbonTabs::Instance().AddTab(L"Image Tab"))
-    {
-      pTab->AddPanel(L"Image - Fiducial Markers", true, 1);
-      pTab->AddPanel(L"Image - Patient Origin", false, 2);
-      pTab->AddPanel(L"Image - Imaging Center", true, 3);
-    }
-    if (auto pTab = RibbonTabs::Instance().AddTab(L"Fusion Tab"))
-    {
-      pTab->AddPanel(L"Fusion - View", false, 1);
-      pTab->AddPanel(L"Fusion - Registration", false, 2);
-      pTab->AddPanel(L"Fusion - Auto Fiducial Markers", false, 3);
-    }
-  }
-
-  RibbonOptionsDlg dialog(m_pMainWnd, IDB_BS_HELP_LIST_16);
-  dialog.DoModal();
+	BCGPShowAboutDlg (AFX_IDS_APP_TITLE);
 }
 
 void CBCGPMSOfficeDemoApp::OnBeforeChangeVisualTheme(CBCGPAppOptions& appOptions, CWnd* pMainWnd)
