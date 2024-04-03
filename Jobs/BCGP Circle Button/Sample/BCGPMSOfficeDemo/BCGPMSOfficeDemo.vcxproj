@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{4655D50D-7449-4F38-ABC2-DC59BB6386E7}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\BCGPMSOfficeDemo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\Bin\BCGPMSOfficeDemo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\Bin\BCGPMSOfficeDemo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(BCGControlBarPro)lib\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\BCGPMSOfficeDemo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\Bin\BCGPMSOfficeDemo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\Bin\BCGPMSOfficeDemo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(BCGControlBarPro)lib\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\BCGPMSOfficeDemo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\Bin\BCGPMSOfficeDemo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\Bin\BCGPMSOfficeDemo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(BCGControlBarPro)lib\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level4</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\BCGPMSOfficeDemo.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(BCGControlBarPro)BCGCBPro;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\..\..\Bin\BCGPMSOfficeDemo.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\..\..\Bin\BCGPMSOfficeDemo.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>$(BCGControlBarPro)lib\$(Platform)\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BackStagePageHelp.cpp" />
+    <ClCompile Include="BackStagePageInfo.cpp" />
+    <ClCompile Include="BackStagePageNew.cpp" />
+    <ClCompile Include="BackStagePageShare.cpp" />
+    <ClCompile Include="BCGPMSOfficeDemo.cpp" />
+    <ClCompile Include="BCGPMSOfficeDemoDoc.cpp" />
+    <ClCompile Include="BCGPMSOfficeDemoView.cpp" />
+    <ClCompile Include="ChartPane.cpp" />
+    <ClCompile Include="ClipboardPane.cpp" />
+    <ClCompile Include="CntrItem.cpp" />
+    <ClCompile Include="Codes\BCGPCircleButton.cpp" />
+    <ClCompile Include="Codes\TestDialog.cpp" />
+    <ClCompile Include="DlgBanner.cpp" />
+    <ClCompile Include="GridPane.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="OptionsPage.cpp" />
+    <ClCompile Include="ResourcePage.cpp" />
+    <ClCompile Include="RibbonListButton.cpp" />
+    <ClCompile Include="RibbonTableButton.cpp" />
+    <ClCompile Include="RibbonTooltipCtrl.cpp" />
+    <ClCompile Include="ShareOptionsPage1.cpp" />
+    <ClCompile Include="ShareOptionsPage2.cpp" />
+    <ClCompile Include="ShareOptionsPage3.cpp" />
+    <ClCompile Include="ShareOptionsPage4.cpp" />
+    <ClCompile Include="ShareOptionsPage5.cpp" />
+    <ClCompile Include="ShareOptionsPage6.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BCGPMSOfficeDemo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BackStagePageHelp.h" />
+    <ClInclude Include="BackStagePageInfo.h" />
+    <ClInclude Include="BackStagePageNew.h" />
+    <ClInclude Include="BackStagePageShare.h" />
+    <ClInclude Include="BCGPMSOfficeDemo.h" />
+    <ClInclude Include="BCGPMSOfficeDemoDoc.h" />
+    <ClInclude Include="BCGPMSOfficeDemoView.h" />
+    <ClInclude Include="ChartPane.h" />
+    <ClInclude Include="ClipboardPane.h" />
+    <ClInclude Include="CntrItem.h" />
+    <ClInclude Include="Codes\BCGPCircleButton.h" />
+    <ClInclude Include="Codes\TestDialog.h" />
+    <ClInclude Include="DlgBanner.h" />
+    <ClInclude Include="GridPane.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="OptionsPage.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="ResourcePage.h" />
+    <ClInclude Include="RibbonListButton.h" />
+    <ClInclude Include="RibbonTableButton.h" />
+    <ClInclude Include="RibbonTooltipCtrl.h" />
+    <ClInclude Include="ShareOptionsPage1.h" />
+    <ClInclude Include="ShareOptionsPage2.h" />
+    <ClInclude Include="ShareOptionsPage3.h" />
+    <ClInclude Include="ShareOptionsPage4.h" />
+    <ClInclude Include="ShareOptionsPage5.h" />
+    <ClInclude Include="ShareOptionsPage6.h" />
+    <ClInclude Include="StdAfx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\Background1.png" />
+    <Image Include="res\Background2.png" />
+    <Image Include="res\Background3.PNG" />
+    <Image Include="res\Background4.PNG" />
+    <Image Include="res\Background5.PNG" />
+    <Image Include="res\Background6.PNG" />
+    <Image Include="res\BCGPMSOfficeDemo.ico" />
+    <Image Include="res\BCGPMSOfficeDemoDoc.ico" />
+    <Image Include="res\BCGSoft_ribbon\category_backstage_small.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_large_0_0.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_large_1_0.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_large_1_1.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_large_1_2.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_small_0_0.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_small_1_0.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_small_1_1.png" />
+    <Image Include="res\BCGSoft_ribbon\category_context_small_1_2.png" />
+    <Image Include="res\BCGSoft_ribbon\category_large_0.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_large_1.png" />
+    <Image Include="res\BCGSoft_ribbon\category_large_2.png" />
+    <Image Include="res\BCGSoft_ribbon\category_large_3.png" />
+    <Image Include="res\BCGSoft_ribbon\category_large_4.png" />
+    <Image Include="res\BCGSoft_ribbon\category_large_5.png" />
+    <Image Include="res\BCGSoft_ribbon\category_large_6.png" />
+    <Image Include="res\BCGSoft_ribbon\category_main_large.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_main_small.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_0.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\category_small_1.png" />
+    <Image Include="res\BCGSoft_ribbon\category_small_2.png" />
+    <Image Include="res\BCGSoft_ribbon\category_small_3.png" />
+    <Image Include="res\BCGSoft_ribbon\category_small_4.png" />
+    <Image Include="res\BCGSoft_ribbon\category_small_5.png" />
+    <Image Include="res\BCGSoft_ribbon\category_small_6.png" />
+    <Image Include="res\BCGSoft_ribbon\main.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\palette_0_0.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_0_0_0.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_0_1.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_0_2.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_0_3.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_0_4.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_0_4_dark.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_1_1.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_1_2_0.png" />
+    <Image Include="res\BCGSoft_ribbon\palette_2_4.png" />
+    <Image Include="res\BCGSoft_ribbon\ribbon_bar.png">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Image>
+    <Image Include="res\BCGSoft_ribbon\status_bar.png" />
+    <Image Include="res\BCGSoft_ribbon\status_group_0.png" />
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bs_checkissues.png" />
+    <Image Include="res\bs_create.png" />
+    <Image Include="res\bs_createpdfxps.png" />
+    <Image Include="res\bs_filetypes.png" />
+    <Image Include="res\bs_help_list_16.png" />
+    <Image Include="res\bs_help_list_32.png" />
+    <Image Include="res\bs_manageversions.png" />
+    <Image Include="res\bs_new.png" />
+    <Image Include="res\bs_print.png" />
+    <Image Include="res\bs_printpreview.png" />
+    <Image Include="res\bs_protect.png" />
+    <Image Include="res\bs_publishblog.png" />
+    <Image Include="res\bs_quickprint.png" />
+    <Image Include="res\bs_save_as.png" />
+    <Image Include="res\bs_sendattachment.png" />
+    <Image Include="res\bs_sendfax.png" />
+    <Image Include="res\bs_sendlink.png" />
+    <Image Include="res\bs_sendpdf.png" />
+    <Image Include="res\bs_sendxps.png" />
+    <Image Include="res\bs_share.png" />
+    <Image Include="res\bs_signin.png" />
+    <Image Include="res\bs_watermark.png" />
+    <Image Include="res\bullets.png" />
+    <Image Include="res\button32.bmp" />
+    <Image Include="res\button32hot.bmp" />
+    <Image Include="res\button32pressed.bmp" />
+    <Image Include="res\chart.bmp" />
+    <Image Include="res\clearall.png" />
+    <Image Include="res\ClipboardItem.png" />
+    <Image Include="res\gridarrows.png" />
+    <Image Include="res\HeaderPat_1.png" />
+    <Image Include="res\HeaderPat_2.png" />
+    <Image Include="res\HeaderPat_3.png" />
+    <Image Include="res\HeaderPat_4.png" />
+    <Image Include="res\info.png" />
+    <Image Include="res\layout.png" />
+    <Image Include="res\LayoutMetro.png" />
+    <Image Include="res\logo.png" />
+    <Image Include="res\multi.png" />
+    <Image Include="res\num.png" />
+    <Image Include="res\options.png" />
+    <Image Include="res\paste.png" />
+    <Image Include="res\pasteall.png" />
+    <Image Include="res\picture.bmp" />
+    <Image Include="res\position1.png" />
+    <Image Include="res\position2.png" />
+    <Image Include="res\spell.ico" />
+    <Image Include="res\spell.png" />
+    <Image Include="res\table.bmp" />
+    <Image Include="res\ThemeColors.png" />
+    <Image Include="res\ThemeEffects.png" />
+    <Image Include="res\ThemeFonts.png" />
+    <Image Include="res\ThemeThemes.png" />
+    <Image Include="res\tooltip-clipboard.png" />
+    <Image Include="res\tooltip-fontdlg.png" />
+    <Image Include="res\tooltip-main.png" />
+    <Image Include="res\tooltip-paragraph.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\BCGPMSOfficeDemo.rc2" />
+    <CustomBuild Include="res\BCGSoft_ribbon\BCGPMSOfficeDemo.ribbon.rc2" />
+    <CustomBuild Include="res\start.rtf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="res\BCGSoft_ribbon\ribbon.xml" />
+    <Xml Include="xptheme.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
