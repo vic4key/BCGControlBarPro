@@ -736,12 +736,6 @@ IDB_PICTURE             BITMAP                  "res\\picture.bmp"
 
 IDB_TABLE               BITMAP                  "res\\table.bmp"
 
-IDB_BTN1_32             BITMAP                  "res\\button32.bmp"
-
-IDB_BTN1_HOT_32         BITMAP                  "res\\button32hot.bmp"
-
-IDB_BTN1_PRESSED_32     BITMAP                  "res\\button32pressed.bmp"
-
 
 /////////////////////////////////////////////////////////////////////////////
 //

@@ -1,5 +1,5 @@
 //{{NO_DEPENDENCIES}}
-// Microsoft Visual C++ generated include file.
+// Microsoft Developer Studio generated include file.
 // Used by BCGPMSOfficeDemo.rc
 //
 #define IDD_FORM_INFO                   101
@@ -121,9 +121,6 @@
 #define IDR_RIBBON_BACKGROUND6          268
 #define IDI_HELP                        269
 #define IDB_CLIPBOARD_ITEM              270
-#define IDB_BTN1_32                     273
-#define IDB_BTN1_HOT_32                 275
-#define IDB_BTN1_PRESSED_32             276
 #define IDC_SHOW_FLOATY                 1005
 #define IDC_COLOR_SCHEME                1007
 #define IDC_SCREENTIP_STYLE             1008
@@ -229,8 +226,6 @@
 #define IDC_ACCENT_COLOR                1114
 #define IDC_BACKGROUND_IMAGE            1115
 #define IDC_SAVE_AS                     1122
-#define IDC_BUTTON4                     1126
-#define IDC_IMAGE_RIGHT                 1128
 #define IDC_MAIL                        17010
 #define IDC_URL                         17011
 #define IDC_YEAR                        17070
@@ -678,9 +673,9 @@
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        279
+#define _APS_NEXT_RESOURCE_VALUE        271
 #define _APS_NEXT_COMMAND_VALUE         33547
-#define _APS_NEXT_CONTROL_VALUE         1140
+#define _APS_NEXT_CONTROL_VALUE         1123
 #define _APS_NEXT_SYMED_VALUE           1101
 #endif
 #endif
