@@ -13,9 +13,6 @@
       <UniqueIdentifier>{6f007520-aa98-4e38-8205-4883d05498e6}</UniqueIdentifier>
       <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
     </Filter>
-    <Filter Include="Codes">
-      <UniqueIdentifier>{05463b2c-ad6b-4f77-a25f-183441596678}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BackStagePageHelp.cpp">
@@ -92,18 +89,6 @@
     </ClCompile>
     <ClCompile Include="StdAfx.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Codes\TestDialog.cpp">
-      <Filter>Codes</Filter>
-    </ClCompile>
-    <ClCompile Include="Codes\BCGPCircleButton.cpp">
-      <Filter>Codes</Filter>
-    </ClCompile>
-    <ClCompile Include="Codes\RibbonOptionsDlg.cpp">
-      <Filter>Codes</Filter>
-    </ClCompile>
-    <ClCompile Include="Codes\RibbonOptions.cpp">
-      <Filter>Codes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -189,21 +174,6 @@
     </ClInclude>
     <ClInclude Include="StdAfx.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Codes\TestDialog.h">
-      <Filter>Codes</Filter>
-    </ClInclude>
-    <ClInclude Include="Codes\BCGPCircleButton.h">
-      <Filter>Codes</Filter>
-    </ClInclude>
-    <ClInclude Include="Codes\RibbonOptionsDlg.h">
-      <Filter>Codes</Filter>
-    </ClInclude>
-    <ClInclude Include="Codes\RibbonOptions.h">
-      <Filter>Codes</Filter>
-    </ClInclude>
-    <ClInclude Include="Codes\SingletonT.h">
-      <Filter>Codes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

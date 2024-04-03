@@ -262,10 +262,6 @@
     <ClCompile Include="ChartPane.cpp" />
     <ClCompile Include="ClipboardPane.cpp" />
     <ClCompile Include="CntrItem.cpp" />
-    <ClCompile Include="Codes\BCGPCircleButton.cpp" />
-    <ClCompile Include="Codes\RibbonOptionsDlg.cpp" />
-    <ClCompile Include="Codes\RibbonOptions.cpp" />
-    <ClCompile Include="Codes\TestDialog.cpp" />
     <ClCompile Include="DlgBanner.cpp" />
     <ClCompile Include="GridPane.cpp" />
     <ClCompile Include="MainFrm.cpp" />
@@ -305,11 +301,6 @@
     <ClInclude Include="ChartPane.h" />
     <ClInclude Include="ClipboardPane.h" />
     <ClInclude Include="CntrItem.h" />
-    <ClInclude Include="Codes\BCGPCircleButton.h" />
-    <ClInclude Include="Codes\RibbonOptionsDlg.h" />
-    <ClInclude Include="Codes\RibbonOptions.h" />
-    <ClInclude Include="Codes\SingletonT.h" />
-    <ClInclude Include="Codes\TestDialog.h" />
     <ClInclude Include="DlgBanner.h" />
     <ClInclude Include="GridPane.h" />
     <ClInclude Include="MainFrm.h" />
